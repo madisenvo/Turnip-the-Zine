@@ -69,7 +69,7 @@ function App() {
                 path="/products/:id" 
                 element={<Detail />} 
               />
-              <Route
+              <Route 
                 path="*" 
                 element={<NoMatch />} 
               />
