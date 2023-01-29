@@ -21,6 +21,9 @@ export const ADD_ORDER = gql`
         description
         price
         quantity
+        category {
+          name
+        }
       }
     }
   }
@@ -46,5 +49,3 @@ export const ADD_USER = gql`
     }
   }
 `;
-
-
