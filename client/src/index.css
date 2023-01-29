@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Mono&display=swap');
+
 :root {
   --primary: #232F3E;
   --secondary: #F3A847;
@@ -28,13 +30,17 @@ body {
   color: var(--dark);
 }
 
+label {
+  font-family: 'Roboto Mono', monospace;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Alfa Slab One', cursive;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -67,6 +73,7 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 
 a {
@@ -97,6 +104,7 @@ button {
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
+  font-family: 'Roboto Mono', monospace;
 }
 
 button:hover {
