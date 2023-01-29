@@ -31,13 +31,6 @@ body {
   color: var(--dark);
 }
 
-label {
-  font-family: 'Roboto Mono', monospace;
-}
-
-ul {
-  font-family: 'Roboto Mono', monospace;
-}
 
 h1,
 h2,
@@ -85,6 +78,7 @@ a {
   color: var(--tertiary);
   text-decoration: none;
   font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
 }
 
 a:hover {
