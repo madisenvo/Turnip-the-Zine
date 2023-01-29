@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.5",
-    "@stripe/stripe-js": "^1.46.0"
+    "@chakra-ui/react": "^2.4.9",
+    "@stripe/stripe-js": "^1.46.0",
+    "react-icons": "^4.7.1"
   }
 }
