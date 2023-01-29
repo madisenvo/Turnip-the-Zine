@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Title() {
+export default function Band() {
     return (
-        <div className="title">
-            <h1>TITLE</h1>
+        <div className="band">
+            <h1>FEATURED BAND</h1>
         </div>
     );
 }
