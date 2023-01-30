@@ -2,8 +2,8 @@
 
 :root {
   --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --secondary: rgb(212, 115, 212);
+  --tertiary: rgba(255, 157, 0, 0.984);
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -145,6 +145,26 @@ input:focus {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.signup-container, .login-container{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-page, .login-page{
+  background-image: url("./assets/formbg.png");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .flex-row {

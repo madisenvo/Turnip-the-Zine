@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
-import styled from "styled-components";
+
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -31,19 +31,11 @@ function Signup(props) {
     });
   };
 
-  const FormContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    font-family: 'Roboto Mono', monospace;
-  `;
-
   return (
-    <div className="container my-1">
+    <div className="signup-page">
+      <div>
       <Link to="/login">← Go to Login</Link>
-      <FormContainer>
+      <div className="signup-container">
         <h2>Signup</h2>
         <form onSubmit={handleFormSubmit}>
           <div className="flex-row space-between my-2">
@@ -90,8 +82,10 @@ function Signup(props) {
             <button type="submit">Submit</button>
           </div>
         </form>
-      </FormContainer>
+      </div>
     </div>
+    </div>
+    
   );
 }
 

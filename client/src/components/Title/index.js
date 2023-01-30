@@ -7,6 +7,8 @@ const VideoDiv = styled.div`
     left: 0;
     width: auto;
     height: auto; 
+    max-width: 100%;
+    max-height: 100%;
     margin: 0;
     padding: 0;
 `

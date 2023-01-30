@@ -28,21 +28,12 @@ function Login(props) {
       ...formState,
       [name]: value,
     });
-  };
-
-  const FormContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    font-family: 'Roboto Mono', monospace;
-  `;  
+  }; 
 
   return (
-    <div className="container my-1">
+    <div className="login-page">
       <Link to="/signup">← Go to Signup</Link>
-      <FormContainer>
+      <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
@@ -74,7 +65,7 @@ function Login(props) {
           <button type="submit">Submit</button>
         </div>
       </form>
-      </FormContainer>
+      </div>
     </div>
   );
 }
