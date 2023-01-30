@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Mono&display=swap');
+
 :root {
   --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --secondary: rgb(212, 115, 212);
+  --tertiary: rgba(255, 157, 0, 0.984);
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -28,13 +30,14 @@ body {
   color: var(--dark);
 }
 
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Alfa Slab One', cursive;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -67,12 +70,14 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 
 a {
   color: var(--tertiary);
   text-decoration: none;
   font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
 }
 
 a:hover {
@@ -97,6 +102,7 @@ button {
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
+  font-family: 'Roboto Mono', monospace;
 }
 
 button:hover {
@@ -139,6 +145,31 @@ input:focus {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* signup/login pages */
+.signup-container, .login-container{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-page, .login-page{
+  background-image: url("./assets/formbg.png");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form-link{
+  margin: 30px;
 }
 
 .flex-row {

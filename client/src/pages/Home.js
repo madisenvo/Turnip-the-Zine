@@ -8,7 +8,7 @@ import Thoughts from "../components/Thoughts";
 
 const Home = () => {
   return (
-    <div className="container">
+    <div>
       <Title />
       <Band />
       <ProductList />
