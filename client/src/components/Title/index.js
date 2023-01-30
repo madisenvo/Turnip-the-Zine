@@ -3,14 +3,9 @@ import styled from "styled-components";
 import titleVideo from "./title.mp4"
 
 const VideoDiv = styled.div`
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto; 
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100%vh;
+    height: 100%vw;
+
 `
 
 export default function Title() {
@@ -22,8 +17,5 @@ export default function Title() {
                 </video>
             </VideoDiv>
         </div>
-
-
-
     );
 }
