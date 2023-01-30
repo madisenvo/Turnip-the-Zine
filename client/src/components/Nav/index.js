@@ -3,15 +3,12 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
 function Nav() {
-
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
-            </Link>
+            <Link to="/orderHistory">Order History</Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -25,14 +22,10 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
+            <Link to="/signup">Signup</Link>
           </li>
           <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       );
@@ -43,14 +36,20 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img"></span>
+          {/* <span role="img"></span> */}
           TURNIP
         </Link>
       </h1>
 
-      <nav>
-        {showNavigation()}
-      </nav>
+      <Link className="flex-row mx-1" to="/band2">
+        Band 2
+      </Link>
+
+      <Link className="flex-row mx-1" to="/band3">
+        Band 3
+      </Link>
+
+      <nav>{showNavigation()}</nav>
     </header>
   );
 }
