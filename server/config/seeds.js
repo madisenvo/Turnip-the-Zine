@@ -18,38 +18,38 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Vinyl Record',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        "Pink Ranger's newest realease. 100% vinyl, 100% awesome.",
+      image: 'pinkrangervinyl.png',
       category: categories[0]._id,
       price: 2.99,
       quantity: 500
     },
     {
-      name: 'Canned Coffee',
+      name: 'Pin',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        'Pink Ranger pin. 100% metal, 100% awesome.',
+      image: 'pinkranger.jpeg',
       category: categories[0]._id,
       price: 1.99,
       quantity: 500
     },
     {
-      name: 'Toilet Paper',
+      name: 'Trucker Hat',
       category: categories[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
+        'Pink Ranger Trucker Hat. 100% cotton, 100% awesome.',
+      image: 'pinkrangerhat.jpeg',
       price: 7.99,
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
+      name: 'Concert Ticket',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
+        'Fee-free ticket to see Pink Ranger at Globe Hall in Denver, CO.',
+      image: 'pinkticket.png',
       price: 3.99,
       quantity: 50
     },
