@@ -21,6 +21,7 @@
     "@chakra-ui/react": "^2.4.9",
     "@stripe/stripe-js": "^1.46.0",
     "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.7.0",
     "react-icons": "^4.7.1"
   }
 }
