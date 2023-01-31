@@ -1,64 +1,10 @@
-
-.commentDiv {
-  margin-bottom: 50px !important;
-  border: 1px solid #edeff2;
-  border-radius: 2px;
-  padding: 50px 70px;
-  border:1px solid #ffffff;
+.commentContainer{
+  margin-top:20px;
+  background-color:#e9ebee;
+  padding: 5%;
 }
 
-.comments-title {
-  font-size: 16px;
-  color: #262626;
-  margin-bottom: 15px;
-  font-family: 'Conv_helveticaneuecyr-bold';
-}
-
-.btn{
-  background-color: rgb(212, 115, 212);
-  color: black;
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0 1px;
-  font-family: 'Roboto Mono', monospace;
-}
-
-.be-img-comment {
-  width: 60px;
-  height: 60px;
-  float: left;
-  margin-bottom: 15px;
-}
-
-.be-ava-comment {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.be-comment-content span {
-  display: inline-block;
-  width: 49%;
-  margin-bottom: 15px;
-}
-
-.be-comment-content a {
-  color: #383b43;
-}
-
-.be-comment-content span {
-  display: inline-block;
-  width: 49%;
-  margin-bottom: 15px;
-}
-
-
-.be-comment-time {
+.commentTime {
   font-size: 11px;
   color: #b4b7c1;
 }
@@ -104,14 +50,27 @@
   border-radius: 3px;
 }
 
-.form-group.fl_icon .form-input {
-  padding-left: 70px;
-}
 
 .form-group textarea.form-input {
+  align-items: center;
+  justify-content: center;
   height: 150px;
+  width: 100%;
 }
 
+.btn {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: var(--secondary);
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}
 
 
 

@@ -3,14 +3,14 @@ import "./thoughts.css";
 
 export default function Thoughts() {
   return (
-    <div className="container">
+    <div className="commentContainer">
       <div className="commentDiv">
         <div>
           <div>
             <span>
               <h4>USER.FISTNAME</h4>
             </span>
-            <span>
+            <span className="commentTime">
               DATE/TIME
             </span>
 
@@ -21,11 +21,7 @@ export default function Thoughts() {
             </p>
           </div>
         </div>
-        <div className="be-comment">
-          <div>
-            <a href="blog-detail-2.html"></a>
-          </div>
-        </div>
+
         <div>
           <form className="form-block">
             <div className="col-xs-12">
@@ -37,7 +33,7 @@ export default function Thoughts() {
                 ></textarea>
               </div>
             </div>
-            <a className="btn btn-primary pull-right">submit</a>
+            <a className="btn pull-right">submit</a>
           </form>
         </div>
       </div>
