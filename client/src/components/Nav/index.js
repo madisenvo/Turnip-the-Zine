@@ -1,7 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Photo from "../../components/Nav/cheackerheader.png";
+
 
 
 
@@ -44,7 +44,7 @@ function Nav() {
       
       
       <h1 class='turnip-nav'>
-        <Link to="/">
+        <Link to="/" class='site-title'>
           TURNIP
         </Link>
       </h1>
