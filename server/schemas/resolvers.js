@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Product, Category, Order, Post, Band } = require("../models");
+const { User, Product, Category, Order, Post } = require("../models");
 const { signToken } = require("../utils/auth");
 const stripe = require("stripe")(
   "sk_test_51MVl7UDPFYKPozNWPCFIAWZjeJzWeOCOmWlDupcTD4tYuflQyZSRc4y2Kng9DwOk06tILZt1xQZi03cQyEV2p0zv00Zgnsbcae"
@@ -36,7 +36,7 @@ const resolvers = {
         const user = await User.findById(context.user._id).populate({
           path: "orders.products",
           populate: "category",
-        });
+        }).populate('posts');
 
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
@@ -140,45 +140,50 @@ const resolvers = {
       );
     },
 
-    // addPost: async (parent, { post }, context) => {
-    //   if (context.user) {
-    //     return await User.findOneAndUpdate(
-    //       { _id: context.user._id },
-    //       { $addToSet: { post: post._id } },
-    //       { new: true }
-    //     );
-    //   }
+    addPost: async (parent, args, context) => {
+      if (context.user) {
+        const postData =  await Post.create(args);
 
-    //  if (!user) {
-    //     throw new AuthenticationError("No user found with this ID!");
-    //   }
-    // },
+        const userData =  await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { posts: postData._id } },
+          { new: true }
+        );
 
-    // updatePost: async (parent, { post }, context) => {
-    //   if (context.user) {
-    //     return await User.findOneAndUpdate(
-    //       context.user._id, post,
-    //       { new: true })
-    //     }
+        return userData;
+      }
 
-    //  if (!user) {
-    //     throw new AuthenticationError("No post with this ID!");
-    //   }
-    // },
+        throw new AuthenticationError("You Need to be logged in!");
+      
+    },
 
-    // deletePost: async (parent, { post_id }, context) => {
-    //   if (context.user) {
-    //     return await User.findOneAndDelete(
-    //       { _id: context.user.post_id },
-    //       { $pull: { posts: { post_id } }},
-    //       { new: true }
-    //     );
-    //   }
+    updatePost: async (parent, {_id, postBody}, context) => {
+      if (context.user) {
+        const updatePost=  await Post.findOneAndUpdate(
+           {_id:_id},
+          {$set: {postBody:postBody}},
+          { new: true })
 
-    //   if (!user) {
-    //     throw new AuthenticationError("No thought found with this ID!");
-    //   }
-    // },
+          return updatePost
+        }
+
+        throw new AuthenticationError("You need to be logged in!");
+      
+    },
+
+    deletePost: async (parent, { _id }, context) => {
+      if (context.user) {
+        return await User.findOneAndDelete(
+          { _id: context.user._id },
+          { $pull: { posts: { _id } }},
+          { new: true }
+        );
+      }
+
+     
+        throw new AuthenticationError("No post found with this ID!");
+      
+    },
 
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });

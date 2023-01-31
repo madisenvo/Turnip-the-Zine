@@ -27,7 +27,7 @@ module.exports = {
     return req;
   },
   signToken: function ({ firstName, username, email, _id }) {
-    const payload = { firstName, email, _id };
+    const payload = { firstName, email, _id, username };
 
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
