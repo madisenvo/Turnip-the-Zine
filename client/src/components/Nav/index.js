@@ -2,6 +2,9 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
+
+
+
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
@@ -34,9 +37,12 @@ function Nav() {
 
   return (
     <header className="flex-row px-1">
+      
+      
       <h1>
         <Link to="/">
           {/* <span role="img"></span> */}
+          {/* <img src={photo} /> */}
           TURNIP
         </Link>
       </h1>
