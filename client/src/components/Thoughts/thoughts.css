@@ -1,5 +1,5 @@
 
-.be-comment-block {
+.commentDiv {
   margin-bottom: 50px !important;
   border: 1px solid #edeff2;
   border-radius: 2px;
@@ -16,6 +16,16 @@
 
 .btn{
   background-color: rgb(212, 115, 212);
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .be-img-comment {
@@ -31,19 +41,10 @@
   border-radius: 50%;
 }
 
-.be-comment-content {
-  margin-left: 80px;
-}
-
 .be-comment-content span {
   display: inline-block;
   width: 49%;
   margin-bottom: 15px;
-}
-
-.be-comment-name {
-  font-size: 13px;
-  font-family: 'Conv_helveticaneuecyr-bold';
 }
 
 .be-comment-content a {
@@ -56,16 +57,13 @@
   margin-bottom: 15px;
 }
 
-.be-comment-time {
-  text-align: right;
-}
 
 .be-comment-time {
   font-size: 11px;
   color: #b4b7c1;
 }
 
-.be-comment-text {
+.commentText {
   font-size: 13px;
   line-height: 18px;
   color: #7a8192;
