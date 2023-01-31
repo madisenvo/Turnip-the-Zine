@@ -89,13 +89,30 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--dark);
 }
 
 header a {
-  color: var(--light);
+  color: var(--dark);
 }
 
+.header-image {
+  display: flex;
+  position: relative;
+  height: 75px;
+  width: 100%;
+  background-image: url("../src/components/Nav/cheackerheader.png");
+}
+
+.turnip-nav {
+  color: #272f32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  width: 100%;
+}
 
 button {
   font-size: 1rem;
@@ -153,7 +170,7 @@ input:focus {
 }
 
 /* signup/login pages */
-.signup-container, .login-container{
+.signup-container, .login-container, .history, .success{
   display: flex;
   flex-direction: column;
   width: 85%;
@@ -164,7 +181,7 @@ input:focus {
   align-items: center;
 }
 
-.signup-page, .login-page{
+.signup-page, .login-page, .success{
   background-image: url("./assets/formbg.png");
   background-size: cover;
   justify-content: center;
