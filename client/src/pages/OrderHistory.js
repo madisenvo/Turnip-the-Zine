@@ -19,6 +19,9 @@ function OrderHistory() {
 
         {user ? (
           <>
+            <div>
+              
+            </div>
             <h2>
               Order History for {user.firstName} {user.lastName}
             </h2>

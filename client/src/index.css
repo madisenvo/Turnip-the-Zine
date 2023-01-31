@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+.video{
+  max-width: 100%;
+}
+
 html,
 body {
   min-height: 100%;
@@ -148,7 +152,7 @@ input:focus {
 }
 
 /* signup/login pages */
-.signup-container, .login-container{
+.signup-container, .login-container, .history, .success{
   display: flex;
   flex-direction: column;
   width: 85%;
@@ -159,7 +163,7 @@ input:focus {
   align-items: center;
 }
 
-.signup-page, .login-page{
+.signup-page, .login-page, .success{
   background-image: url("./assets/formbg.png");
   background-size: cover;
   justify-content: center;
