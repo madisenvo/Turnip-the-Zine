@@ -41,14 +41,6 @@ function Nav() {
         </Link>
       </h1>
 
-      <Link className="flex-row mx-1" to="/band2">
-        Band 2
-      </Link>
-
-      <Link className="flex-row mx-1" to="/band3">
-        Band 3
-      </Link>
-
       <nav>{showNavigation()}</nav>
     </header>
   );
