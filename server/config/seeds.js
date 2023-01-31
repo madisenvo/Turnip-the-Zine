@@ -19,7 +19,7 @@ db.once('open', async () => {
     {
       name: 'Vinyl Record',
       description:
-        "Pink Ranger's newest realease. Vinyl, Splater Edition, hand numbered.",
+        "Pink Ranger's newest realease. Vinyl, hand numbered original run.",
       image: 'pinkrangervinyl.png',
       category: categories[0]._id,
       price: 35.00,
@@ -38,7 +38,7 @@ db.once('open', async () => {
       name: 'Trucker Hat',
       category: categories[2]._id,
       description:
-        'Pink Ranger Trucker Hat. Snapback.',
+        'Pink Ranger Trucker Hat. Snapback, pink bill, white front panel, pink mesh.',
       image: 'pinkrangerhat.jpeg',
       price: 20.00,
       quantity: 30
@@ -55,8 +55,8 @@ db.once('open', async () => {
     {
       name: 'Vinyl Record',
       description:
-        "Chit Chat's newest realease. Vinyl, White Edition.",
-      image: 'chitownvinyl.png',
+        "ChitChat's self titled CHITCHAT. Vinyl, White Edition.",
+      image: 'chitchatvinyl.png',
       category: categories[0]._id,
       price: 35.00,
       quantity: 50
@@ -64,7 +64,7 @@ db.once('open', async () => {
     {
       name: 'Pin',
       description:
-        'Chit Chat pin. 100% metal, yellow 1" diameter .',
+        'ChitChat pin. 100% metal, yellow 1" diameter.',
       image: 'chitchatpin.jpeg',
       category: categories[1]._id,
       price: 1.99,
@@ -74,8 +74,8 @@ db.once('open', async () => {
       name: 'Trucker Hat',
       category: categories[2]._id,
       description:
-        'Chit Chat Trucker Hat. Snapback.',
-      image: 'chitchathat.jpeg',
+        'ChitChat Trucker Hat. Snapback, red bill white front panel, blue mesh.',
+      image: 'chitchathatjpeg.jpeg',
       price: 18.00,
       quantity: 50
     },
@@ -83,15 +83,15 @@ db.once('open', async () => {
       name: 'Concert Ticket',
       category: categories[3]._id,
       description:
-        'Fee-free ticket to see Chit Chat at The Gothic Theater in Denver, CO.',
-      image: 'chitticket.png',
+        'Fee-free ticket to see ChitChat at The Gothic Theater in Denver, CO.',
+      image: 'chitchatticket.png',
       price: 30.00,
       quantity: 50
     },
     {
       name: 'Vinyl Record',
       description:
-        "Amzy's newest realease. Vinyl, Orange Limited Edition.",
+        "Amzy's Beast in the Bottle Limited Edition Vinyl.",
       image: 'amzyvinyl.png',
       category: categories[0]._id,
       price: 35.00,
@@ -100,7 +100,7 @@ db.once('open', async () => {
     {
       name: 'Pin',
       description:
-        'Amzy pin. 100% metal, White 1.5" diameter .',
+        'Amzy pin. 100% metal, White 1.5" diameter.',
       image: 'amzypin.jpeg',
       category: categories[1]._id,
       price: 1.99,
@@ -110,7 +110,7 @@ db.once('open', async () => {
       name: 'Trucker Hat',
       category: categories[2]._id,
       description:
-        'Amzy Trucker Hat. Snapback.',
+        'Amzy Trucker Hat. Snapback, black bill, white front panel, black mesh.',
       image: 'amzyhat.jpeg',
       price: 18.00,
       quantity: 20
