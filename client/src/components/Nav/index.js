@@ -1,6 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import Photo from '../../components/Nav/blackturnip.png';
 
 
 
@@ -44,8 +45,8 @@ function Nav() {
       
       
       <h1 class='turnip-nav'>
-        <Link to="/" class='site-title'>
-          TURNIP
+        <Link to="/" class='site-logo'>
+          {/* <img src={Photo} alt='turnip' /> */}
         </Link>
       </h1>
 
