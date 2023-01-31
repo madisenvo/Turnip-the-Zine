@@ -142,15 +142,15 @@ const resolvers = {
 
     // addPost: async (parent, { post }, context) => {
     //   if (context.user) {
-    //     return User.findOneAndUpdate(
+    //     return await User.findOneAndUpdate(
     //       { _id: context.user._id },
     //       { $addToSet: { post: post._id } },
     //       { new: true }
     //     );
     //   }
 
-    //if (!user) {
-    //     throw new AuthenticationError("Not logged in");
+    //  if (!user) {
+    //     throw new AuthenticationError("No user found with this ID!");
     //   }
     // },
 
@@ -161,8 +161,8 @@ const resolvers = {
     //       { new: true })
     //     }
 
-    // if (!user) {
-    //     throw new AuthenticationError("Not logged in");
+    //  if (!user) {
+    //     throw new AuthenticationError("No post with this ID!");
     //   }
     // },
 
@@ -175,8 +175,8 @@ const resolvers = {
     //     );
     //   }
 
-    // if (!user) {
-    //     throw new AuthenticationError("Not logged in");
+    //   if (!user) {
+    //     throw new AuthenticationError("No thought found with this ID!");
     //   }
     // },
 
