@@ -10,6 +10,7 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
+
     products: async (parent, { category, name }) => {
       const params = {};
 
@@ -25,9 +26,11 @@ const resolvers = {
 
       return await Product.find(params).populate("category");
     },
+
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");
     },
+
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -42,6 +45,7 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -54,6 +58,7 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
@@ -91,6 +96,7 @@ const resolvers = {
       return { session: session.id };
     },
   },
+
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -98,6 +104,7 @@ const resolvers = {
 
       return { token, user };
     },
+
     addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {
@@ -112,6 +119,7 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, {
@@ -121,6 +129,7 @@ const resolvers = {
 
       throw new AuthenticationError("Not logged in");
     },
+
     updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
@@ -130,57 +139,47 @@ const resolvers = {
         { new: true }
       );
     },
-    addPost: async (parent, { post }, context) => {
-      if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { post: post._id } },
-          { new: true }
-        );
-      }
 
-      if (context.Band) {
-        return Band.findOneAndUpdate(
-          context.Band,
-          { $addToSet: { post: post._id } },
-          { new: true }
-        );
-      }
+    // addPost: async (parent, { post }, context) => {
+    //   if (context.user) {
+    //     return User.findOneAndUpdate(
+    //       { _id: context.user._id },
+    //       { $addToSet: { post: post._id } },
+    //       { new: true }
+    //     );
+    //   }
 
-      if (!user) {
-        throw new AuthenticationError("Not logged in");
-      }
-    },
-    updatePost: async (parent, { post }, context) => {
-      if (context.user) {
-        return await User.findOneAndUpdate(
-          context.user._id, post, 
-          { new: true })
-        }
+    //if (!user) {
+    //     throw new AuthenticationError("Not logged in");
+    //   }
+    // },
 
-      if (context.Band) {
-        return await Band.findOneAndUpdate(
-          context.Band.post,
-          { new: true}
-        )
-      }
-    },
-    deletePost: async (parent, { post_id }, context) => {
-      if (context.user) {
-        return await User.findOneAndDelete(
-          { _id: context.user.post_id },
-          { $pull: { posts: { post_id } }},
-          { new: true }
-        );
-      }
+    // updatePost: async (parent, { post }, context) => {
+    //   if (context.user) {
+    //     return await User.findOneAndUpdate(
+    //       context.user._id, post,
+    //       { new: true })
+    //     }
 
-      if (context.Band) {
-        return await Band.findOneAndUpdate(
-          { _id: context.Band.post_id },
-          { new: true}
-        )
-      }
-    },
+    // if (!user) {
+    //     throw new AuthenticationError("Not logged in");
+    //   }
+    // },
+
+    // deletePost: async (parent, { post_id }, context) => {
+    //   if (context.user) {
+    //     return await User.findOneAndDelete(
+    //       { _id: context.user.post_id },
+    //       { $pull: { posts: { post_id } }},
+    //       { new: true }
+    //     );
+    //   }
+
+    // if (!user) {
+    //     throw new AuthenticationError("Not logged in");
+    //   }
+    // },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
