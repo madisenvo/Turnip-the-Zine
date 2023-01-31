@@ -17,14 +17,13 @@
   background: #f6f6f7;
   border: 1px solid #edeff2;
   padding: 15px 20px 20px 20px;
+  width: auto;
 }
 
 .form-group.fl_icon .icon {
   position: absolute;
   top: 1px;
   left: 16px;
-  width: 48px;
-  height: 48px;
   background: #f6f6f7;
   color: #b5b8c2;
   text-align: center;
