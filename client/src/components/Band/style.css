@@ -1,0 +1,15 @@
+.cardBody {
+	background: black;
+	color: white !important;
+}
+.cardImg {
+	border: 10px, solid, black !important;
+	border-radius: 50% !important;
+}
+
+.cardGroup {
+padding-top: 20%;
+padding-bottom: 20%;
+background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) !important;
+}
+

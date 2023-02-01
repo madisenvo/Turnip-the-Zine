@@ -9,7 +9,7 @@ export const artists = [
 	{
 		imagePath: pinkRanger,
 		alt: "Pink Ranger profile picture",
-		title: "Pink Ranger",
+		title: "PINK RANGER",
 		titleTwo: "Musical Genius, All the ninja moves, Lover of pink, Basically famous.",
 		text: "Angsty Rock Artist",
 		footer: "PLAYING SATURDAY 2/18"
@@ -17,17 +17,17 @@ export const artists = [
 	{
 		imagePath: chitChat,
 		alt: "ChitChat profile picture",
-		title: "ChitChat",
+		title: "CHITCHAT",
 		titleTwo: "Musical Genius, All the ninja moves, Lover of pink, Basically famous.",
-		text: "Angsty Rock Artist",
+		text: "Pop Punk Band",
 		footer: "PLAYING SATURDAY 2/18"
 	},
 	{
 		imagePath: amzy,
 		alt: "Amzy profile picture",
-		title: "Amzy",
+		title: "AMZY",
 		titleTwo: "Musical Genius, All the ninja moves, Lover of pink, Basically famous.",
-		text: "Angsty Rock Artist",
+		text: " Smooth Jazz",
 		footer: "PLAYING SATURDAY 2/18"
 	},
 ];

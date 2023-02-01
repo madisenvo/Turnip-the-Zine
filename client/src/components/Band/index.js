@@ -1,5 +1,6 @@
 import React from "react";
 // import styled from "styled-components";
+import "./style.css";
 
 
 
@@ -11,12 +12,14 @@ import { artists } from "./data.js";
 export default function GroupExample() {
   return (
     <>
-    <CardGroup>
+    <CardGroup className="cardGroup">
 {artists.map((artist) => ( 
       <Card
+      border="dark" 
+      style={{ width: '18rem' }}
       >
-        <Card.Img variant="top" src= { artist.imagePath } />
-        <Card.Body>
+        <Card.Img className="cardImg" variant="top" src= { artist.imagePath } />
+        <Card.Body className="cardBody">
           <Card.Title>{artist.title}</Card.Title>
           <Card.Title>{artist.titleTwo}</Card.Title>
           <Card.Text>
