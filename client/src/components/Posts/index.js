@@ -1,23 +1,34 @@
-import React from "react";
+import { getOperationAST } from "graphql";
+import React, { useEffect } from "react";
+import { idbPromise } from "../../utils/helpers";
 import "./thoughts.css";
 
 export default function Thoughts() {
+//   useEffect(() => {   
+//     console.log("hi") 
+//     async function getPosts() {
+//       console.log('before')
+//       const post = await idbPromise("posts", "get");
+//       console.log('after')
+//     }  
+//   getPosts()
+
+//   }, []);
+
   return (
     <div className="commentContainer">
       <div className="commentDiv">
         <div>
           <div>
             <span>
-              <h4>USERNAME</h4>
+              <h4>username</h4>
             </span>
             <span className="commentTime">
-              DATE/TIME
+              10/10/10
             </span>
 
             <p className="commentText">
-              Pellentesque gravida tristique ultrices. Sed blandit varius
-              mauris, vel volutpat urna hendrerit id. Curabitur rutrum dolor
-              gravida turpis tristique efficitur.
+                hi
             </p>
           </div>
         </div>
