@@ -188,7 +188,7 @@ input:focus {
   align-items: center;
 }
 
-.success{
+.success, .noMatch{
   background-image: url("./assets/formbg.png");
   background-size: cover;
   display: flex;
