@@ -100,7 +100,7 @@ header a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+  padding: 25px 10%;
   background-image: url("../src/components/Nav/cheackerheader.png");
 }
 
