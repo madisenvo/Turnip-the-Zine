@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Mono&display=swap');
+
 :root {
   --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --secondary: rgb(223,92,163);
+  --tertiary: rgba(255, 157, 0, 0.984);
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -11,6 +13,10 @@
 
 * {
   box-sizing: border-box;
+}
+
+.video{
+  max-width: 100%;
 }
 
 html,
@@ -28,13 +34,14 @@ body {
   color: var(--dark);
 }
 
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Alfa Slab One', cursive;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -67,12 +74,14 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+  font-family: 'Roboto Mono', monospace;
 }
 
 a {
   color: var(--tertiary);
   text-decoration: none;
   font-weight: bold;
+  font-family: 'Roboto Mono', monospace;
 }
 
 a:hover {
@@ -80,11 +89,37 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--dark);
 }
 
 header a {
-  color: var(--light);
+  color: var(--dark);
+}
+
+.header-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background-size:cover;
+  background-image: url("../src/components/Nav/checker.png");
+}
+
+.site-logo {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  left: 40px;
+  height: 90px;
+  width: 90px;
+  cursor: pointer;
+  background-size: cover;
+  background-image: url("../src/components/Nav/turniplogo.png");
+}
+
+.nav__links {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 button {
@@ -97,6 +132,7 @@ button {
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
+  font-family: 'Roboto Mono', monospace;
 }
 
 button:hover {
@@ -139,6 +175,51 @@ input:focus {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* signup/login pages */
+.signup-container, .login-container{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.success, .noMatch{
+  background-image: url("./assets/formbg.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  padding: 90px;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.signup-page, .login-page{
+  background-image: url("./assets/formbg.png");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.history{
+  text-align: center;
+  margin: 40px;
+}
+
+.form-link{
+  margin: 30px;
 }
 
 .flex-row {

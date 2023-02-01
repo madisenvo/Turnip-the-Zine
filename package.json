@@ -4,8 +4,8 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server --ignore client",
-    "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
@@ -17,6 +17,14 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+<<<<<<< HEAD
     "moment": "^2.29.4"
+=======
+    "@apollo/client": "^3.7.5",
+    "@chakra-ui/react": "^2.4.9",
+    "@stripe/stripe-js": "^1.46.0",
+    "bootstrap": "^5.2.3",
+    "react-icons": "^4.7.1"
+>>>>>>> 453b83d4982613bf9d6a0030bf74ec1c388559be
   }
 }
