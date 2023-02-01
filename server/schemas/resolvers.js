@@ -33,10 +33,12 @@ const resolvers = {
 
     user: async (parent, args, context) => {
       if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "orders.products",
-          populate: "category",
-        }).populate('posts');
+        const user = await User.findById(context.user._id)
+          .populate({
+            path: "orders.products",
+            populate: "category",
+          })
+          .populate("posts");
 
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
@@ -95,6 +97,9 @@ const resolvers = {
 
       return { session: session.id };
     },
+    posts:async () => {
+      return await Post.find();
+    }
   },
 
   Mutation: {
@@ -142,9 +147,9 @@ const resolvers = {
 
     addPost: async (parent, args, context) => {
       if (context.user) {
-        const postData =  await Post.create(args);
+        const postData = await Post.create(args);
 
-        const userData =  await User.findOneAndUpdate(
+        const userData = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { posts: postData._id } },
           { new: true }
@@ -153,36 +158,37 @@ const resolvers = {
         return userData;
       }
 
-        throw new AuthenticationError("You Need to be logged in!");
-      
+      throw new AuthenticationError("You Need to be logged in!");
     },
 
-    updatePost: async (parent, {_id, postBody}, context) => {
+    updatePost: async (parent, { _id, postBody }, context) => {
       if (context.user) {
-        const updatePost=  await Post.findOneAndUpdate(
-           {_id:_id},
-          {$set: {postBody:postBody}},
-          { new: true })
+        const updatePost = await Post.findOneAndUpdate(
+          { _id: _id },
+          { $set: { postBody: postBody } },
+          { new: true }
+        );
 
-          return updatePost
-        }
+        return updatePost;
+      }
 
-        throw new AuthenticationError("You need to be logged in!");
-      
+      throw new AuthenticationError("You need to be logged in!");
     },
 
     deletePost: async (parent, { _id }, context) => {
       if (context.user) {
-        return await User.findOneAndDelete(
+        const postData = await Post.findByIdAndRemove({ _id: _id });
+
+        const userData = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { posts: { _id } }},
+          { $pull: { posts: { _id } } },
           { new: true }
         );
+
+        return userData;
       }
 
-     
-        throw new AuthenticationError("No post found with this ID!");
-      
+      throw new AuthenticationError("You need to be logged in!");
     },
 
     login: async (parent, { email, password }) => {
