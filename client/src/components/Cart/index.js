@@ -1,16 +1,22 @@
-import React, { useEffect } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import { useLazyQuery } from '@apollo/client';
-import { QUERY_CHECKOUT } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
-import CartItem from '../CartItem';
-import Auth from '../../utils/auth';
-import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
-import './style.css';
+import React, { useEffect } from "react";
+import { loadStripe } from "@stripe/stripe-js";
+import { useLazyQuery } from "@apollo/client";
+import { QUERY_CHECKOUT } from "../../utils/queries";
+import { idbPromise } from "../../utils/helpers";
+import CartItem from "../CartItem";
+import Auth from "../../utils/auth";
+import { useStoreContext } from "../../utils/GlobalState";
+import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
+import "./style.css";
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
+<<<<<<< HEAD
+const stripePromise = loadStripe(
+  "sk_test_51MVl7UDPFYKPozNWPCFIAWZjeJzWeOCOmWlDupcTD4tYuflQyZSRc4y2Kng9DwOk06tILZt1xQZi03cQyEV2p0zv00Zgnsbcae"
+);
+=======
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+>>>>>>> 453b83d4982613bf9d6a0030bf74ec1c388559be
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
@@ -30,7 +36,7 @@ const Cart = () => {
   // If so, invoke the getCart method and populate the cart with the existing from the session
   useEffect(() => {
     async function getCart() {
-      const cart = await idbPromise('cart', 'get');
+      const cart = await idbPromise("cart", "get");
       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     }
 
