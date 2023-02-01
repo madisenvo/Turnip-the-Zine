@@ -107,7 +107,7 @@ header a {
 .site-logo {
   position: absolute;
   display: flex;
-  top: -4px;
+  top: 10px;
   left: 40px;
   height: 90px;
   width: 90px;
@@ -116,15 +116,10 @@ header a {
   background-image: url("../src/components/Nav/turniplogo.png");
 }
 
-.site-logo:hover {
-  color:#0088a9;
-}
-
 .nav__links {
   display: inline-block;
   padding: 0px 20px;
 }
-
 
 button {
   font-size: 1rem;
