@@ -2,11 +2,6 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
-// import Photo from '../../components/Nav/blackturnip.png';
-
-
-
-
 
 function Nav() {
   function showNavigation() {
@@ -40,15 +35,9 @@ function Nav() {
 
   return (
     <header className="header-image">
-      <div class=''>
-      {/* <img src={Photo} alt="logo" /> */}
-      </div>
-      
-      
       <h1 class='flex-row'>
         <div class="mx-1">
         <Link to="/" class='site-logo'>
-          {/* <img src={Photo} alt='turnip' /> */}
         </Link>
         </div>
       </h1>
