@@ -23,7 +23,7 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="nav__links">
-            <Link to="/signup"><button>Signup</button></Link>
+            <Link to="/signup"><button>Sig-up</button></Link>
           </li>
           <li className="nav__links">
             <Link to="/login"><button>Login</button></Link>
