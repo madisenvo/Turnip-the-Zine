@@ -107,13 +107,13 @@ header a {
 .site-logo {
   position: absolute;
   display: flex;
-  top: 13px;
+  top: -4px;
   left: 40px;
-  height: 79px;
-  width: 63px;
+  height: 90px;
+  width: 90px;
   cursor: pointer;
   background-size: cover;
-  background-image: url("../src/components/Nav/blackturnip.png");
+  background-image: url("../src/components/Nav/turniplogo.png");
 }
 
 .site-logo:hover {
