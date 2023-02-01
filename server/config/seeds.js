@@ -101,7 +101,7 @@ db.once('open', async () => {
       name: 'Pin',
       description:
         'Amzy pin. 100% metal, White 1.5" diameter.',
-      image: 'amzypin.jpeg',
+      image: 'amzypin.png',
       category: categories[1]._id,
       price: 1.99,
       quantity: 100
