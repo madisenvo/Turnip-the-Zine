@@ -2,6 +2,7 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
+
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
@@ -21,11 +22,11 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">Signup</Link>
+          <li className="nav__links">
+            <Link to="/signup"><button>Signup</button></Link>
           </li>
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
+          <li className="nav__links">
+            <Link to="/login"><button>Login</button></Link>
           </li>
         </ul>
       );
@@ -33,11 +34,12 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          TURNIP
+    <header className="header-image">
+      <h1 class='flex-row'>
+        <div class="mx-1">
+        <Link to="/" class='site-logo'>
         </Link>
+        </div>
       </h1>
 
       <nav>{showNavigation()}</nav>
