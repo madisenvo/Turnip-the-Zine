@@ -97,9 +97,9 @@ const resolvers = {
 
       return { session: session.id };
     },
-    posts:async () => {
+    posts: async () => {
       return await Post.find();
-    }
+    },
   },
 
   Mutation: {
