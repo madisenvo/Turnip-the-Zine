@@ -89,11 +89,36 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--dark);
 }
 
 header a {
-  color: var(--light);
+  color: var(--dark);
+}
+
+.header-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-image: url("../src/components/Nav/cheackerheader.png");
+}
+
+.site-logo {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  left: 40px;
+  height: 90px;
+  width: 90px;
+  cursor: pointer;
+  background-size: cover;
+  background-image: url("../src/components/Nav/turniplogo.png");
+}
+
+.nav__links {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 button {
@@ -163,7 +188,7 @@ input:focus {
   align-items: center;
 }
 
-.success, .history{
+.success{
   background-image: url("./assets/formbg.png");
   background-size: cover;
   display: flex;
@@ -185,6 +210,11 @@ input:focus {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+
+.history{
+  text-align: center;
+  margin: 40px;
 }
 
 .form-link{

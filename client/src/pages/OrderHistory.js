@@ -19,12 +19,11 @@ function OrderHistory() {
 
         {user ? (
           <>
-            <div>
-              
+            <div className="history">
+              <h2>
+                Order History for 🎶 {user.firstName} {user.lastName} 🎶
+              </h2>
             </div>
-            <h2>
-              Order History for {user.firstName} {user.lastName}
-            </h2>
             {user.orders.map((order) => (
               <div key={order._id} className="my-2">
                 <h3>
