@@ -96,17 +96,6 @@ header a {
   color: var(--dark);
 }
 
-/* .header-image {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
-  position: relative;
-  height: 75px;
-  width: 100%;
-  background-image: url("../src/components/Nav/cheackerheader.png");
-} */
-
 .header-image {
   display: flex;
   justify-content: space-between;
@@ -115,21 +104,11 @@ header a {
   background-image: url("../src/components/Nav/cheackerheader.png");
 }
 
-
-/* .site-logo {
-  position: absolute;
-  top: 0;
-  left: 39px;
-  height: 79px;
-  width: 63px;
-  cursor: pointer;
-  background-size: cover;
-  background-image: url("../src/components/Nav/blackturnip.png");
-} */
 .site-logo {
   position: absolute;
-  top: 0;
-  left: 39px;
+  display: flex;
+  top: 13px;
+  left: 40px;
   height: 79px;
   width: 63px;
   cursor: pointer;
@@ -137,17 +116,15 @@ header a {
   background-image: url("../src/components/Nav/blackturnip.png");
 }
 
-
-
-
-/* .site-logo:hover  {
-  cursor: pointer;
-} */
+.site-logo:hover {
+  color:#0088a9;
+}
 
 .nav__links {
   display: inline-block;
   padding: 0px 20px;
 }
+
 
 button {
   font-size: 1rem;

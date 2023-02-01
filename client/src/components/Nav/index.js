@@ -1,7 +1,8 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Photo from '../../components/Nav/blackturnip.png';
+
+// import Photo from '../../components/Nav/blackturnip.png';
 
 
 
@@ -27,10 +28,10 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="nav__links">
-            <Link to="/signup">Signup</Link>
+            <Link to="/signup"><button>Signup</button></Link>
           </li>
           <li className="nav__links">
-            <Link to="/login">Login</Link>
+            <Link to="/login"><button>Login</button></Link>
           </li>
         </ul>
       );
