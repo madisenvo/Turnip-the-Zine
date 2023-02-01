@@ -101,7 +101,7 @@ header a {
   justify-content: space-between;
   align-items: center;
   padding: 25px 10%;
-  background-image: url("../src/components/Nav/cheackerheader.png");
+  background-image: url("../src/components/Nav/checkerheader.png");
 }
 
 .site-logo {
