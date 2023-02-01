@@ -8,7 +8,7 @@ export default function Thoughts() {
         <div>
           <div>
             <span>
-              <h4>USER.FISTNAME</h4>
+              <h4>USERNAME</h4>
             </span>
             <span className="commentTime">
               DATE/TIME
