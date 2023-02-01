@@ -26,10 +26,10 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
+          <li className="nav__links">
             <Link to="/signup">Signup</Link>
           </li>
-          <li className="mx-1">
+          <li className="nav__links">
             <Link to="/login">Login</Link>
           </li>
         </ul>
@@ -44,10 +44,12 @@ function Nav() {
       </div>
       
       
-      <h1 class='turnip-nav'>
+      <h1 class='flex-row'>
+        <div class="mx-1">
         <Link to="/" class='site-logo'>
           {/* <img src={Photo} alt='turnip' /> */}
         </Link>
+        </div>
       </h1>
 
       <nav>{showNavigation()}</nav>

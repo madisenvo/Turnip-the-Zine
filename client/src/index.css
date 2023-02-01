@@ -96,26 +96,57 @@ header a {
   color: var(--dark);
 }
 
-.header-image {
+/* .header-image {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
   position: relative;
   height: 75px;
   width: 100%;
   background-image: url("../src/components/Nav/cheackerheader.png");
+} */
+
+.header-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-image: url("../src/components/Nav/cheackerheader.png");
 }
 
-.turnip-nav {
-  
-}
 
+/* .site-logo {
+  position: absolute;
+  top: 0;
+  left: 39px;
+  height: 79px;
+  width: 63px;
+  cursor: pointer;
+  background-size: cover;
+  background-image: url("../src/components/Nav/blackturnip.png");
+} */
 .site-logo {
   position: absolute;
   top: 0;
   left: 39px;
   height: 79px;
   width: 63px;
+  cursor: pointer;
   background-size: cover;
   background-image: url("../src/components/Nav/blackturnip.png");
+}
+
+
+
+
+/* .site-logo:hover  {
+  cursor: pointer;
+} */
+
+.nav__links {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 button {
