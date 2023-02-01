@@ -111,7 +111,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Amzy Trucker Hat. Snapback, black bill, white front panel, black mesh.',
-      image: 'amzyhat.jpeg',
+      image: 'amzyhat.png',
       price: 18.00,
       quantity: 20
     },
