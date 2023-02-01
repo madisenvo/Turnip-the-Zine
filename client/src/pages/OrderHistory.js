@@ -21,7 +21,7 @@ function OrderHistory() {
           <>
             <div className="history">
               <h2>
-                Order History for 🎶 {user.firstName} {user.lastName} 🎶
+                Order History for {user.firstName} {user.lastName} 🎶
               </h2>
             </div>
             {user.orders.map((order) => (
