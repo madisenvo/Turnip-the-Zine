@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+
     "moment": "^2.29.4",
     "@apollo/client": "^3.7.5",
     "@chakra-ui/react": "^2.4.9",
@@ -24,5 +25,6 @@
     "bootstrap": "^5.2.3",
     "react-bootstrap": "^2.7.0",
     "react-icons": "^4.7.1"
+
   }
 }
