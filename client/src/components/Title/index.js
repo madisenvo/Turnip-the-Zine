@@ -24,13 +24,9 @@ export default function Title() {
       </video>
 
       <ContentDiv className="content">
-        <h1 style={{ fontSize: "2vw" }} >About Us</h1>
+        <h1 style={{ fontSize: "2vw" }} >turnip</h1>
         <p style={{ fontSize: "1vw" }} >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-          fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
-          accusantium nemo autem.
+        Checkout this months feature artists and come out to support local music.
         </p>
       </ContentDiv>
     </Container>
