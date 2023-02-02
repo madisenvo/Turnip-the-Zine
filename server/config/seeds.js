@@ -75,7 +75,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'ChitChat Trucker Hat. Snapback, red bill white front panel, blue mesh.',
-      image: 'chitchathatjpeg.jpeg',
+      image: 'chitchathat.png',
       price: 18.00,
       quantity: 50
     },
