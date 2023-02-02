@@ -45,7 +45,6 @@ function App() {
           <StoreProvider>
             <Nav />
             <Routes>
-<<<<<<< HEAD
               <Route 
                 path="/" 
                 element={<Home />} 
@@ -74,7 +73,6 @@ function App() {
                 path="*" 
                 element={<NoMatch />} 
               />
-=======
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
@@ -82,7 +80,6 @@ function App() {
               <Route path="/orderHistory" element={<OrderHistory />} />
               <Route path="/products/:id" element={<Detail />} />
               <Route path="*" element={<NoMatch />} />
->>>>>>> 453b83d4982613bf9d6a0030bf74ec1c388559be
             </Routes>
           </StoreProvider>
         </div>
