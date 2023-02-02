@@ -39,7 +39,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Pink Ranger Trucker Hat. Snapback, pink bill, white front panel, pink mesh.',
-      image: 'pinkrangerhat.jpeg',
+      image: 'pinkrangerhat.png',
       price: 20.00,
       quantity: 30
     },
