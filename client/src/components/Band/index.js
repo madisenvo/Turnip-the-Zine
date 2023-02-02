@@ -21,7 +21,7 @@ export default function GroupExample() {
         <Card.Img className="cardImg" variant="top" src= { artist.imagePath } />
         <Card.Body className="cardBody">
           <Card.Title>{artist.title}</Card.Title>
-          <Card.Title>{artist.titleTwo}</Card.Title>
+          <Card.Title>{artist.titleTwo}Hi</Card.Title>
           <Card.Text>
             {artist.text}
           </Card.Text>
