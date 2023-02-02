@@ -2,18 +2,18 @@ import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 
+
 function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/orderHistory">Order History</Link>
+          <li className="nav__links">
+            <Link to="/orderHistory"><button>Order History</button></Link>
           </li>
-          <li className="mx-1">
+          <li className="nav__links">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
+            <a href="/" onClick={() => Auth.logout()}><button> Logout</button>
             </a>
           </li>
         </ul>
@@ -21,11 +21,11 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">Signup</Link>
+          <li className="nav__links">
+            <Link to="/signup"><button>Sign-up</button></Link>
           </li>
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
+          <li className="nav__links">
+            <Link to="/login"><button>Login</button></Link>
           </li>
         </ul>
       );
@@ -33,11 +33,12 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          TURNIP
+    <header className="header-image">
+      <h1 class='flex-row'>
+        <div class="mx-1">
+        <Link to="/" class='site-logo'>
         </Link>
+        </div>
       </h1>
 
       <nav>{showNavigation()}</nav>
