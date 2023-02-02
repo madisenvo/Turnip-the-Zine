@@ -29,7 +29,7 @@ db.once('open', async () => {
       name: 'Pin',
       description:
         'Pink Ranger pin. 100% metal, pink 2" diameter.',
-      image: 'pinkranger.jpeg',
+      image: 'pinkranger.png',
       category: categories[1]._id,
       price: 2.99,
       quantity: 100
