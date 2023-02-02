@@ -29,7 +29,7 @@ db.once('open', async () => {
       name: 'Pin',
       description:
         'Pink Ranger pin. 100% metal, pink 2" diameter.',
-      image: 'pinkranger.jpeg',
+      image: 'pinkranger.png',
       category: categories[1]._id,
       price: 2.99,
       quantity: 100
@@ -39,7 +39,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Pink Ranger Trucker Hat. Snapback, pink bill, white front panel, pink mesh.',
-      image: 'pinkrangerhat.jpeg',
+      image: 'pinkrangerhat.png',
       price: 20.00,
       quantity: 30
     },
@@ -65,7 +65,7 @@ db.once('open', async () => {
       name: 'Pin',
       description:
         'ChitChat pin. 100% metal, yellow 1" diameter.',
-      image: 'chitchatpin.jpeg',
+      image: 'chitchatpin.png',
       category: categories[1]._id,
       price: 1.99,
       quantity: 100
@@ -75,7 +75,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'ChitChat Trucker Hat. Snapback, red bill white front panel, blue mesh.',
-      image: 'chitchathatjpeg.jpeg',
+      image: 'chitchathat.png',
       price: 18.00,
       quantity: 50
     },
@@ -101,7 +101,7 @@ db.once('open', async () => {
       name: 'Pin',
       description:
         'Amzy pin. 100% metal, White 1.5" diameter.',
-      image: 'amzypin.jpeg',
+      image: 'amzypin.png',
       category: categories[1]._id,
       price: 1.99,
       quantity: 100
@@ -111,7 +111,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'Amzy Trucker Hat. Snapback, black bill, white front panel, black mesh.',
-      image: 'amzyhat.jpeg',
+      image: 'amzyhat.png',
       price: 18.00,
       quantity: 20
     },
