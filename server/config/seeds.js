@@ -65,7 +65,7 @@ db.once('open', async () => {
       name: 'Pin',
       description:
         'ChitChat pin. 100% metal, yellow 1" diameter.',
-      image: 'chitchatpin.jpeg',
+      image: 'chitchatpin.png',
       category: categories[1]._id,
       price: 1.99,
       quantity: 100
