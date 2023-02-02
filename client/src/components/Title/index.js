@@ -26,7 +26,7 @@ export default function Title() {
       <ContentDiv className="content">
         <h1 style={{ fontSize: "2vw" }} >turnip</h1>
         <p style={{ fontSize: "1vw" }} >
-        Checkout this months feature artists and come out to support local music.
+        Checkout this month's featured artists and come out to support local music.
         </p>
       </ContentDiv>
     </Container>
