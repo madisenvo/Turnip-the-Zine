@@ -8,7 +8,10 @@ import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
-  TOGGLE_CART
+  TOGGLE_CART,
+  ADD_POSTS,
+  UPDATE_POSTS,
+  REMOVE_POSTS
 } from "./actions";
 
 export const reducer = (state, action) => {
@@ -26,7 +29,7 @@ export const reducer = (state, action) => {
         posts: [...action.posts],
       };
 
-    case REMOVE_POST:
+    case REMOVE_POSTS:
       let newPostState = state.posts.filter(posts => {
         return posts._id !== action._id;
       });
