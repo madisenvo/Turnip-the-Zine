@@ -12,4 +12,4 @@ export const UPDATE_CURRENT_CATEGORY = "UPDATE_CURRENT_CATEGORY";
 
 export const ADD_POSTS = "ADD_POSTS";
 export const UPDATE_POSTS = "UPDATE_POSTS";
-export const REMOVE_POST = "REMOVE_POSTS";
+export const REMOVE_POSTS = "REMOVE_POSTS";
