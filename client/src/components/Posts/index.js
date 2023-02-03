@@ -37,8 +37,6 @@ const Posts = () => {
     useEffect(() => {console.log(username)}, [username]);
 
     const handleSubmit = (e) => {
-    // console.log to make sure the submit button works
-    console.log("submit handled")
     e.preventDefault();
     addPost({
         variables: { postId, postBody, username, createdAt },
@@ -54,6 +52,8 @@ const Posts = () => {
     setUsername("");
     setPostId("");
     setCreatedAt("");
+        // console.log to make sure the submit button works
+    console.log("submit handler")
     };
 
     const handleUpdate = (e, postId) => {
