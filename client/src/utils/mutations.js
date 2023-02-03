@@ -11,7 +11,7 @@ export const LOGIN = gql`
   }
 `;
 
-// MV added post mutations
+// Maddy added post mutations
 export const ADD_POST = gql`
   mutation addPost($postBody: String!, $username: String!) {
     addPost(postBody: $postBody, username: $username) {

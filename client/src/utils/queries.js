@@ -11,7 +11,7 @@ export const QUERY_POSTS = gql`
   }
 `;
 
-// MV added post mutations here beause they were not working in the mutations.js file
+// Maddy added post mutations here beause they were not working in the mutations.js file
 export const ADD_POST = gql`
   mutation addPost($postBody: String!, $username: String!) {
     addPost(postBody: $postBody, username: $username) {
