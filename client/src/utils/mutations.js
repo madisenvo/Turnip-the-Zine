@@ -11,6 +11,17 @@ export const LOGIN = gql`
   }
 `;
 
+export const ADD_POST = gql`
+  mutation addPost($postBody: String!, $username: String!) {
+    addPost(postBody: $postBody) {
+      _id
+      postBody
+      username
+      createdAt
+      }
+    }
+`;
+
 export const ADD_ORDER = gql`
   mutation addOrder($products: [ID]!) {
     addOrder(products: $products) {
