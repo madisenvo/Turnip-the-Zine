@@ -48,6 +48,18 @@ export const QUERY_CATEGORIES = gql`
   }
 `;
 
+export const QUERY_POSTS = gql`
+  {
+    posts {
+      _id
+      createdAt
+      postBody
+      username
+    }
+  }
+`;
+
+
 export const QUERY_USER = gql`
   {
     user {
