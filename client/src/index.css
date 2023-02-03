@@ -108,7 +108,7 @@ header a {
 .site-logo {
   position: absolute;
   display: flex;
-  top: 10px;
+  top: 2px;
   left: 40px;
   height: 90px;
   width: 90px;
@@ -126,7 +126,11 @@ button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem !important;
+
+  border-radius: .5rem !important; 
+
+ 
+
   border: none;
   outline: none;
   cursor: pointer;
