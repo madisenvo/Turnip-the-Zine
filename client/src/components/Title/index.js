@@ -14,6 +14,8 @@ const ContentDiv = styled.div`
 
 const Container = styled.div`
   position: relative;
+  text-align: center;
+  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) !important;
 `;
 
 export default function Title() {
