@@ -16,6 +16,38 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
+export const ADD_POST = gql`
+  mutation addPost($postBody: String!, $username: String!) {
+    addPost(postBody: $postBody) {
+      _id
+      postBody
+      username
+      createdAt
+    }
+  }
+`;
+
+export const REMOVE_POST = gql`
+  mutation removePost($postId: ID!) {
+    removePost(postId: $postId) {
+      _id
+    }
+  }
+`;
+
+export const UPDATE_POST = gql`
+  mutation updatePost($postId: ID!, $postBody: String!) {
+    updatePost(postId: $postId, postBody: $postBody) {
+      _id
+      postBody
+      username
+      createdAt
+    }
+  }
+`;
+
+
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {

@@ -18,6 +18,7 @@ export const reducer = (state, action) => {
   switch (action.type) {
 
     case ADD_POST:
+      console.log("add post", action.posts)
       return {
         ...state,
         posts: [...state.posts, action.posts],
