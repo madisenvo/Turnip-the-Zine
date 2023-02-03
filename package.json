@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "cdbreact": "^1.5.5",
     "moment": "^2.29.4"
   }
 }
