@@ -108,7 +108,7 @@ header a {
 .site-logo {
   position: absolute;
   display: flex;
-  top: 10px;
+  top: 2px;
   left: 40px;
   height: 90px;
   width: 90px;
