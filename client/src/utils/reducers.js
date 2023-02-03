@@ -8,11 +8,40 @@ import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
-  TOGGLE_CART
+  TOGGLE_CART,
+  ADD_POST,
+  UPDATE_POST,
+  DELETE_POST
 } from "./actions";
 
 export const reducer = (state, action) => {
   switch (action.type) {
+
+// Maddy added post cases
+    case ADD_POST:
+      console.log("ADD_POST case in reducers", action.posts)
+      return {
+        ...state,
+        posts: [...state.posts, action.posts],
+      };
+    
+    case UPDATE_POST:
+      return {
+        ...state,
+        posts: [...action.posts],
+      };
+
+    case DELETE_POST:
+      let newPostState = state.posts.filter(posts => {
+        return posts._id !== action._id;
+      });
+
+      return {
+        ...state,
+        postsList: newPostState.length > 0,
+        posts: newPostState
+      };
+
     case UPDATE_PRODUCTS:
       return {
         ...state,

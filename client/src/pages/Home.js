@@ -3,8 +3,7 @@ import ProductList from "../components/ProductList";
 import Cart from "../components/Cart";
 import Title from "../components/Title";
 import Band from "../components/Band";
-// import Video from "../components/Video";
-import Thoughts from "../components/Posts";
+import Posts from "../components/Posts";
 
 
 const Home = () => {
@@ -14,7 +13,7 @@ const Home = () => {
       <Band />
       {/* <Video /> */}
       <ProductList />
-      <Thoughts />
+      <Posts />
       <Cart />
     </div>
   );

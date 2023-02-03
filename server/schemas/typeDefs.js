@@ -22,11 +22,11 @@ const typeDefs = gql`
     products: [Product]
   }
 
-   type Post{
-   _id: ID
-   postBody: String
-   username: String
-   createdAt: String
+  type Post{
+  _id: ID
+  postBody: String
+  username: String
+  createdAt: String
   }
 
   type User {

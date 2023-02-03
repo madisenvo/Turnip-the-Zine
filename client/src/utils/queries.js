@@ -1,5 +1,55 @@
 import { gql } from '@apollo/client';
 
+export const QUERY_POSTS = gql`
+  {
+    posts {
+      _id
+      createdAt
+      postBody
+      username
+    }
+  }
+`;
+
+// Maddy added post mutations here beause they were not working in the mutations.js file
+export const ADD_POST = gql`
+  mutation addPost($postId: ID!, $postBody: String!, $username: String!, $createdAt: String!) {
+    addPost(postId: $postId, postBody: $postBody, username: $username, createdAt: $createdAt) {
+      _id
+      postBody
+      username
+      createdAt
+    }
+  }
+`;
+
+export const DELETE_POST = gql`
+  mutation deletedPost($postId: ID!) {
+    deletedPost(postId: $postId) {
+      _id
+    }
+  }
+`;
+
+export const UPDATE_POST = gql`
+  mutation updatePost($postId: ID!, $postBody: String!, $username: String!, $createdAt: String!) {
+    updatePost(postId: $postId, postBody: $postBody, username: $username, createdAt: $createdAt) {
+      _id
+      postBody
+      username
+      createdAt
+    }
+  }
+`;
+
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($products: [ID]!) {
+    checkout(products: $products) {
+      session
+    }
+  }
+`;
+
 export const QUERY_PRODUCTS = gql`
   query getProducts($category: ID) {
     products(category: $category) {
@@ -12,14 +62,6 @@ export const QUERY_PRODUCTS = gql`
       category {
         _id
       }
-    }
-  }
-`;
-
-export const QUERY_CHECKOUT = gql`
-  query getCheckout($products: [ID]!) {
-    checkout(products: $products) {
-      session
     }
   }
 `;
