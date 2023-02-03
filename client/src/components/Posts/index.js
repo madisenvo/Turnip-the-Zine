@@ -16,6 +16,8 @@ const Posts = () => {
     const [deletePost, { data: deletedPostData }] = useMutation(DELETE_POST);
     const [postBody, setPostBody] = useState("");
     const [username, setUsername] = useState("");
+    const [postId, setPostId] = useState("");
+    const [createdAt, setCreatedAt] = useState("");
 
     useEffect(() => {
     getPosts();
@@ -30,16 +32,16 @@ const Posts = () => {
     }
     }, [data]);
 
-    // making inputs work
+    // making sure inputs work
     useEffect(() => {console.log(postBody)}, [postBody]);
-
     useEffect(() => {console.log(username)}, [username]);
 
     const handleSubmit = (e) => {
+    // console.log to make sure the submit button works
     console.log("submit handled")
     e.preventDefault();
     addPost({
-        variables: { postBody, username },
+        variables: { postId, postBody, username, createdAt },
         update: (store, { data: { addPost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
@@ -50,12 +52,14 @@ const Posts = () => {
     });
     setPostBody("");
     setUsername("");
+    setPostId("");
+    setCreatedAt("");
     };
 
     const handleUpdate = (e, postId) => {
     e.preventDefault();
     updatePost({
-        variables: { postId, postBody, username },
+        variables: { postId, postBody, username, createdAt },
         update: (store, { data: { updatePost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
@@ -70,6 +74,8 @@ const Posts = () => {
     });
     setPostBody("");
     setUsername("");
+    setPostId("");
+    setCreatedAt("");
     };
 
     const handleDelete = (e, postId) => {
