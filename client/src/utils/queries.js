@@ -1,24 +1,20 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_PRODUCTS = gql`
-  query getProducts($category: ID) {
-    products(category: $category) {
+export const QUERY_POSTS = gql`
+  {
+    posts {
       _id
-      name
-      description
-      price
-      quantity
-      image
-      category {
-        _id
-      }
+      createdAt
+      postBody
+      username
     }
   }
 `;
 
+// MV added post mutations here beause they were not working in the mutations.js file
 export const ADD_POST = gql`
   mutation addPost($postBody: String!, $username: String!) {
-    addPost(postBody: $postBody) {
+    addPost(postBody: $postBody, username: $username) {
       _id
       postBody
       username
@@ -27,9 +23,9 @@ export const ADD_POST = gql`
   }
 `;
 
-export const REMOVE_POST = gql`
-  mutation removePost($postId: ID!) {
-    removePost(postId: $postId) {
+export const DELETE_POST = gql`
+  mutation deletedPost($postId: ID!) {
+    deletedPost(postId: $postId) {
       _id
     }
   }
@@ -46,12 +42,26 @@ export const UPDATE_POST = gql`
   }
 `;
 
-
-
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {
       session
+    }
+  }
+`;
+
+export const QUERY_PRODUCTS = gql`
+  query getProducts($category: ID) {
+    products(category: $category) {
+      _id
+      name
+      description
+      price
+      quantity
+      image
+      category {
+        _id
+      }
     }
   }
 `;
@@ -79,18 +89,6 @@ export const QUERY_CATEGORIES = gql`
     }
   }
 `;
-
-export const QUERY_POSTS = gql`
-  {
-    posts {
-      _id
-      createdAt
-      postBody
-      username
-    }
-  }
-`;
-
 
 export const QUERY_USER = gql`
   {

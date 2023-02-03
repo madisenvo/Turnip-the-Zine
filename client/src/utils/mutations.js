@@ -11,9 +11,29 @@ export const LOGIN = gql`
   }
 `;
 
+// MV added post mutations
 export const ADD_POST = gql`
   mutation addPost($postBody: String!, $username: String!) {
-    addPost(postBody: $postBody) {
+    addPost(postBody: $postBody, username: $username) {
+      _id
+      postBody
+      username
+      createdAt
+    }
+  }
+`;
+
+export const DELETE_POST = gql`
+  mutation deletedPost($postId: ID!) {
+    deletedPost(postId: $postId) {
+      _id
+    }
+  }
+`;
+
+export const UPDATE_POST = gql`
+  mutation updatePost($postId: ID!, $postBody: String!) {
+    updatePost(postId: $postId, postBody: $postBody) {
       _id
       postBody
       username

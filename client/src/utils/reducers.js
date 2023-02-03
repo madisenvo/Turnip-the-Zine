@@ -11,12 +11,13 @@ import {
   TOGGLE_CART,
   ADD_POST,
   UPDATE_POST,
-  REMOVE_POST
+  DELETE_POST
 } from "./actions";
 
 export const reducer = (state, action) => {
   switch (action.type) {
 
+// MV added post cases
     case ADD_POST:
       console.log("add post", action.posts)
       return {
@@ -30,7 +31,7 @@ export const reducer = (state, action) => {
         posts: [...action.posts],
       };
 
-    case REMOVE_POST:
+    case DELETE_POST:
       let newPostState = state.posts.filter(posts => {
         return posts._id !== action._id;
       });
