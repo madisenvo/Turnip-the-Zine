@@ -126,7 +126,7 @@ button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  border-radius: .5rem !important; 
   border: none;
   outline: none;
   cursor: pointer;
