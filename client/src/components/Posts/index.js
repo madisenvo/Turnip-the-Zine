@@ -14,7 +14,7 @@ const Posts = () => {
     const [addPost, { data: postData }] = useMutation(ADD_POST);
     const [updatePost, { data: updatedPostData }] = useMutation(UPDATE_POST);
     const [deletePost, { data: deletedPostData }] = useMutation(DELETE_POST);
-    const [postText, setPostText] = useState("");
+    const [postBody, setPostBody] = useState("");
     const [username, setUsername] = useState("");
 
     useEffect(() => {
@@ -30,7 +30,8 @@ const Posts = () => {
     }
     }, [data]);
 
-    useEffect(() => {console.log(postText)}, [postText]);
+    // making inputs work
+    useEffect(() => {console.log(postBody)}, [postBody]);
 
     useEffect(() => {console.log(username)}, [username]);
 
@@ -38,7 +39,7 @@ const Posts = () => {
     console.log("submit handled")
     e.preventDefault();
     addPost({
-        variables: { postText, username },
+        variables: { postBody, username },
         update: (store, { data: { addPost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
@@ -47,14 +48,14 @@ const Posts = () => {
         });
         },
     });
-    setPostText("");
+    setPostBody("");
     setUsername("");
     };
 
     const handleUpdate = (e, postId) => {
     e.preventDefault();
     updatePost({
-        variables: { postId, postText, username },
+        variables: { postId, postBody, username },
         update: (store, { data: { updatePost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
@@ -67,7 +68,7 @@ const Posts = () => {
         });
         },
     });
-    setPostText("");
+    setPostBody("");
     setUsername("");
     };
 
@@ -99,15 +100,15 @@ const Posts = () => {
         <input
             type="text"
             placeholder="Post"
-            value={postText}
-            onChange={(e) => setPostText(e.target.value)}
+            value={postBody}
+            onChange={(e) => setPostBody(e.target.value)}
         />
         <button type="submit">Post</button>
         </form>
         {state.posts.map((post) => (
         <div key={post._id}>
             <p>
-            <b>{post.username}</b> {post.postText}
+            <b>{post.username}</b> {post.postBody}
             </p>
             <button onClick={(e) => handleUpdate(e, post._id)}>Update</button>
             <button onClick={(e) => handleDelete(e, post._id)}>Delete</button>
