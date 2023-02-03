@@ -34,9 +34,9 @@ function Nav() {
 
   return (
     <header className="header-image">
-      <h1 class='flex-row'>
-        <div class="mx-1">
-        <Link to="/" class='site-logo'>
+      <h1 className='flex-row'>
+        <div className="mx-1">
+        <Link to="/" className='site-logo'>
         </Link>
         </div>
       </h1>

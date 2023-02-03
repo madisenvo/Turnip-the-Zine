@@ -11,6 +11,7 @@ const Home = () => {
     <div>
       <Title />
       <Band />
+      {/* <Video /> */}
       <ProductList />
       <PostList />
       <Cart />
