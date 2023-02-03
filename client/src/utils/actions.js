@@ -10,6 +10,6 @@ export const TOGGLE_CART = "TOGGLE_CART";
 export const UPDATE_CATEGORIES = "UPDATE_CATEGORIES";
 export const UPDATE_CURRENT_CATEGORY = "UPDATE_CURRENT_CATEGORY";
 
-export const ADD_POSTS = "ADD_POSTS";
-export const UPDATE_POSTS = "UPDATE_POSTS";
-export const REMOVE_POSTS = "REMOVE_POSTS";
+export const ADD_POST = "ADD_POST";
+export const UPDATE_POST = "UPDATE_POST";
+export const REMOVE_POST = "REMOVE_POST";

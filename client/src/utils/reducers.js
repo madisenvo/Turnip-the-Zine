@@ -9,27 +9,27 @@ import {
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
   TOGGLE_CART,
-  ADD_POSTS,
-  UPDATE_POSTS,
-  REMOVE_POSTS
+  ADD_POST,
+  UPDATE_POST,
+  REMOVE_POST
 } from "./actions";
 
 export const reducer = (state, action) => {
   switch (action.type) {
 
-    case ADD_POSTS:
+    case ADD_POST:
       return {
         ...state,
         posts: [...state.posts, action.posts],
       };
     
-    case UPDATE_POSTS:
+    case UPDATE_POST:
       return {
         ...state,
         posts: [...action.posts],
       };
 
-    case REMOVE_POSTS:
+    case REMOVE_POST:
       let newPostState = state.posts.filter(posts => {
         return posts._id !== action._id;
       });
