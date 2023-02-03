@@ -13,6 +13,30 @@ import {
 
 export const reducer = (state, action) => {
   switch (action.type) {
+
+    case ADD_POSTS:
+      return {
+        ...state,
+        posts: [...state.posts, action.posts],
+      };
+    
+    case UPDATE_POSTS:
+      return {
+        ...state,
+        posts: [...action.posts],
+      };
+
+    case REMOVE_POST:
+      let newPostState = state.posts.filter(posts => {
+        return posts._id !== action._id;
+      });
+
+      return {
+        ...state,
+        postsList: newPostState.length > 0,
+        posts: newPostState
+      };
+
     case UPDATE_PRODUCTS:
       return {
         ...state,
