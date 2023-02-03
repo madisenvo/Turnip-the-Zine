@@ -24,23 +24,18 @@ const Posts = () => {
     useEffect(() => {
     if (data) {
         dispatch({
-        type: "QUERY_POSTS",
+        type: "ADD_POST",
         posts: data.posts,
         });
     }
     }, [data]);
 
-// checking that inputs are working
-    useEffect(() => {
-    console.log(postText);
-    }, [postText]);
+    useEffect(() => {console.log(postText)}, [postText]);
 
-    useEffect(() => {
-    console.log(username);
-    }, [username]);
+    useEffect(() => {console.log(username)}, [username]);
 
     const handleSubmit = (e) => {
-    console.log("submit handled");
+    console.log("submit handled")
     e.preventDefault();
     addPost({
         variables: { postText, username },
