@@ -1,3 +1,5 @@
+// Maddy is confused SOS
+import './posts.css';
 import React, { useState, useEffect } from "react";
 import { useLazyQuery, useMutation } from "@apollo/client";
 import {
@@ -95,7 +97,18 @@ const Posts = () => {
     };
 
     return (
-    <div>
+    <div className="posts">
+        <container className="postContainer">
+            {state.posts.map((post) => (
+                <div key={post._id}>
+                    <p>
+                        <b>{post.username}</b> {post.postBody}
+                    </p>
+                    <button onClick={(e) => handleUpdate(e, post._id)}>Update</button>
+                    <button onClick={(e) => handleDelete(e, post._id)}>Delete</button>
+                </div>
+            ))}
+        </container>
         <form onSubmit={handleSubmit}>
         <input
             type="text"
@@ -111,15 +124,6 @@ const Posts = () => {
         />
         <button type="submit">Post</button>
         </form>
-        {state.posts.map((post) => (
-        <div key={post._id}>
-            <p>
-            <b>{post.username}</b> {post.postBody}
-            </p>
-            <button onClick={(e) => handleUpdate(e, post._id)}>Update</button>
-            <button onClick={(e) => handleDelete(e, post._id)}>Delete</button>
-        </div>
-        ))}
     </div>
     );
 };
