@@ -35,7 +35,7 @@ const typeDefs = gql`
     username: String
     email: String
     orders: [Order]
-    posts: [Post]
+    posts: [Post!]
   }
 
   type Checkout {

@@ -2,12 +2,11 @@
 import './posts.css';
 import React, { useState, useEffect } from "react";
 import { useLazyQuery, useMutation } from "@apollo/client";
-import {
-    QUERY_POSTS,
-    ADD_POST,
-    UPDATE_POST,
-    DELETE_POST,
-} from "../../utils/queries";
+import { QUERY_POSTS } from "../../utils/queries";
+import { ADD_POST } from "../../utils/mutations";
+import { UPDATE_POST } from "../../utils/mutations";
+import { DELETE_POST } from "../../utils/mutations";
+
 import { useStoreContext } from "../../utils/GlobalState";
 
 const Posts = () => {
@@ -93,17 +92,19 @@ const Posts = () => {
 
     return (
     <div className="posts">
-        <container className="postContainer">
+        <div className="postContainer">
             {state.posts.map((post) => (
                 <div key={post._id}>
-                    <p>
-                        <b>{post.username}</b> {post.postBody}
+                    <p> 
+                        {post.username}
+                        <b/> 
+                        {post.postBody}
                     </p>
                     <button onClick={(e) => handleUpdate(e, post._id)}>Update</button>
                     <button onClick={(e) => handleDelete(e, post._id)}>Delete</button>
                 </div>
             ))}
-        </container>
+        </div>
         <form onSubmit={handleSubmit}>
         <input
             type="text"
