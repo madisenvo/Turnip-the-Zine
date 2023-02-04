@@ -1,4 +1,3 @@
-// Maddy is confused SOS
 import './posts.css';
 import React, { useState, useEffect } from "react";
 import { useLazyQuery, useMutation } from "@apollo/client";
@@ -98,8 +97,8 @@ const Posts = () => {
     <div className="posts">
         <div className="postContainer">
             {state.posts.map((post) => (
-                <div key={post._id}>
-                    <p> 
+                <div className="postDiv" key={post._id}>
+                    <p className="commentText"> 
                         {post.username}
                         <b/> 
                         {post.postBody}

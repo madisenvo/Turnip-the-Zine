@@ -17,7 +17,6 @@ import {
 export const reducer = (state, action) => {
   switch (action.type) {
 
-// Maddy added post cases
     case ADD_POST:
       console.log("ADD_POST case in reducers", action.posts)
       return {

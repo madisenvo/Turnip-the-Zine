@@ -4,7 +4,6 @@ import { useProductReducer } from './reducers'
 const StoreContext = createContext();
 const { Provider } = StoreContext;
 
-// Maddy added post array
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useProductReducer({
     products: [],
