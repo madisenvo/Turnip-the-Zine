@@ -8,7 +8,7 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
 	color: white !important;
 }
 .cardImg {
-	border-radius: 50% !important;
+	/* border-radius: 50% !important; */
 	transition: transform 0.2s ease;
 }
 

@@ -24,6 +24,7 @@ const Posts = () => {
 
     useEffect(() => {
     if (data) {
+        console.log(data);
         dispatch({
         type: "ADD_POST",
         posts: data.posts,
