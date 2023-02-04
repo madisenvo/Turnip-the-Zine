@@ -3,9 +3,12 @@ import './posts.css';
 import React, { useState, useEffect } from "react";
 import { useLazyQuery, useMutation } from "@apollo/client";
 import { QUERY_POSTS } from "../../utils/queries";
-import { ADD_POST } from "../../utils/mutations";
-import { UPDATE_POST } from "../../utils/mutations";
-import { DELETE_POST } from "../../utils/mutations";
+import { 
+    ADD_POST,
+    UPDATE_POST,
+    DELETE_POST
+} from "../../utils/mutations";
+
 
 import { useStoreContext } from "../../utils/GlobalState";
 

@@ -16,11 +16,8 @@ export const ADD_POST = gql`
 mutation addPost($postBody: String!, $username: String!) {
   addPost(postBody: $postBody, username: $username) {
     _id
-    posts {
-      _id
-      postBody
-      username
-    }
+    username
+    postBody
   }
 }
 `;
