@@ -9,18 +9,19 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^5.2.3",
+    "cdbreact": "^1.5.5",
+    "dotenv": "^16.0.3",
     "graphql": "^14.6.0",
     "jwt-decode": "^2.2.0",
+    "moment": "^2.29.4",
     "react": "^16.13.1",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^16.13.1",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.2",
-    "styled-components": "^5.3.6",
-    "moment": "^2.29.4",
-    "bootstrap": "^5.2.3",
-    "react-bootstrap": "^2.7.0",
-    "cdbreact": "^1.5.5",
-    "react-icons": "^4.7.1"
+    "styled-components": "^5.3.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +44,4 @@
       "last 1 safari version"
     ]
   }
-
 }

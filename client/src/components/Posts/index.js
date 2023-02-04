@@ -16,30 +16,28 @@ export default function Posts() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const token = Auth.loggedIn() ? Auth.getToken() : null
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
 
     // if(!textData){
     //   return false
     // }
 
-    if(!token){
-      return false
+    if (!token) {
+      return false;
     }
 
-   
     try {
       const postObj = {
         postBody: textData,
-        username: userData.username
-      }
+        username: userData.username,
+      };
       const postData = await addPost({
-        variables: postObj
-      })
+        variables: postObj,
+      });
 
-      console.log(postData)
-
-    }catch(err){
-      console.error(err)
+      console.log(postData);
+    } catch (err) {
+      console.error(err);
     }
   };
 
@@ -70,7 +68,9 @@ export default function Posts() {
                 ></textarea>
               </div>
             </div>
-            <button className="btn pull-right" type="submit">submit</button>
+            <button className="btn pull-right" type="submit">
+              submit
+            </button>
           </form>
         </div>
       </div>
