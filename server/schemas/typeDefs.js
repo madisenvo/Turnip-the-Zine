@@ -26,7 +26,6 @@ const typeDefs = gql`
   _id: ID
   postBody: String
   username: String
-  createdAt: String
   }
 
   type User {
@@ -36,7 +35,7 @@ const typeDefs = gql`
     username: String
     email: String
     orders: [Order]
-    posts: [Post]
+    posts: [Post!]
   }
 
   type Checkout {

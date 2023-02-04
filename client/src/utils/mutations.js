@@ -13,12 +13,16 @@ export const LOGIN = gql`
 
 // Maddy added post mutations
 export const ADD_POST = gql`
-  mutation addPost($postId: ID!, $postBody: String!, $username: String!, $createdAt: String!) {
-    addPost(postBody: $postBody, username: $username ) {
+mutation addPost($postBody: String!, $username: String!) {
+  addPost(postBody: $postBody, username: $username) {
+    _id
+    posts {
       _id
+      postBody
       username
     }
   }
+}
 `;
 
 export const DELETE_POST = gql`
@@ -30,12 +34,10 @@ export const DELETE_POST = gql`
 `;
 
 export const UPDATE_POST = gql`
-  mutation updatePost($postId: ID!, $postBody: String!, $username: String!, $createdAt: String!) {
-    updatePost(postId: $postId, postBody: $postBody, username: $username, createdAt: $createdAt) {
+  mutation updatePost($postId: ID!, $postBody: String!) {
+    updatePost(postId: $postId, postBody: $postBody) {
       _id
       postBody
-      username
-      createdAt
     }
   }
 `;

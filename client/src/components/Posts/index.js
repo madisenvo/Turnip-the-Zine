@@ -2,12 +2,11 @@
 import './posts.css';
 import React, { useState, useEffect } from "react";
 import { useLazyQuery, useMutation } from "@apollo/client";
-import {
-    QUERY_POSTS,
-    UPDATE_POST,
-    DELETE_POST,
-} from "../../utils/queries";
-import { ADD_POST } from '../../utils/mutations';
+import { QUERY_POSTS } from "../../utils/queries";
+import { ADD_POST } from "../../utils/mutations";
+import { UPDATE_POST } from "../../utils/mutations";
+import { DELETE_POST } from "../../utils/mutations";
+
 import { useStoreContext } from "../../utils/GlobalState";
 
 const Posts = () => {
@@ -18,8 +17,6 @@ const Posts = () => {
     const [deletePost, { data: deletedPostData }] = useMutation(DELETE_POST);
     const [postBody, setPostBody] = useState("");
     const [username, setUsername] = useState("");
-    const [postId, setPostId] = useState("");
-    const [createdAt, setCreatedAt] = useState("");
 
     useEffect(() => {
     getPosts();
@@ -53,8 +50,7 @@ const Posts = () => {
     });
     setPostBody("");
     setUsername("");
-    setPostId("");
-    setCreatedAt("");
+
         // console.log to make sure the submit button works
     console.log("submit handler")
     };
@@ -62,7 +58,7 @@ const Posts = () => {
     const handleUpdate = (e, postId) => {
     e.preventDefault();
     updatePost({
-        variables: { postId, postBody, username, createdAt },
+        variables: { postBody, username },
         update: (store, { data: { updatePost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
@@ -77,8 +73,6 @@ const Posts = () => {
     });
     setPostBody("");
     setUsername("");
-    setPostId("");
-    setCreatedAt("");
     };
 
     const handleDelete = (e, postId) => {
@@ -99,17 +93,19 @@ const Posts = () => {
 
     return (
     <div className="posts">
-        <container className="postContainer">
+        <div className="postContainer">
             {state.posts.map((post) => (
                 <div key={post._id}>
-                    <p>
-                        <b>{post.username}</b> {post.postBody}
+                    <p> 
+                        {post.username}
+                        <b/> 
+                        {post.postBody}
                     </p>
                     <button onClick={(e) => handleUpdate(e, post._id)}>Update</button>
                     <button onClick={(e) => handleDelete(e, post._id)}>Delete</button>
                 </div>
             ))}
-        </container>
+        </div>
         <form onSubmit={handleSubmit}>
         <input
             type="text"
