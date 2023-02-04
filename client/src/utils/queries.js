@@ -11,36 +11,6 @@ export const QUERY_POSTS = gql`
   }
 `;
 
-export const ADD_POST = gql`
-  mutation addPost($postBody: String!, $username: String!) {
-  addPost(postBody: $postBody, username: $username) {
-    _id
-    posts {
-      _id
-      postBody
-      username
-    }
-  }
-}
-`;
-
-export const DELETE_POST = gql`
-  mutation deletedPost($postId: ID!) {
-    deletedPost(postId: $postId) {
-      _id
-    }
-  }
-`;
-
-export const UPDATE_POST = gql`
-  mutation updatePost($postId: ID!, $postBody: String!) {
-    updatePost(postId: $postId, postBody: $postBody) {
-      _id
-      postBody
-    }
-  }
-`;
-
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {

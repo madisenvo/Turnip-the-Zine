@@ -1,11 +1,13 @@
-// Maddy is confused SOS
 import './posts.css';
 import React, { useState, useEffect } from "react";
 import { useLazyQuery, useMutation } from "@apollo/client";
 import { QUERY_POSTS } from "../../utils/queries";
-import { ADD_POST } from "../../utils/mutations";
-import { UPDATE_POST } from "../../utils/mutations";
-import { DELETE_POST } from "../../utils/mutations";
+import { 
+    ADD_POST,
+    UPDATE_POST,
+    DELETE_POST
+} from "../../utils/mutations";
+
 
 import { useStoreContext } from "../../utils/GlobalState";
 
@@ -95,8 +97,8 @@ const Posts = () => {
     <div className="posts">
         <div className="postContainer">
             {state.posts.map((post) => (
-                <div key={post._id}>
-                    <p> 
+                <div className="postDiv" key={post._id}>
+                    <p className="commentText"> 
                         {post.username}
                         <b/> 
                         {post.postBody}
