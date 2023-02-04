@@ -7,6 +7,7 @@ import {
     UPDATE_POST,
     DELETE_POST
 } from "../../utils/mutations";
+import Auth from "../../utils/auth";
 
 
 import { useStoreContext } from "../../utils/GlobalState";
@@ -108,21 +109,25 @@ const Posts = () => {
                 </div>
             ))}
         </div>
-        <form onSubmit={handleSubmit}>
-        <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-            type="text"
-            placeholder="Post"
-            value={postBody}
-            onChange={(e) => setPostBody(e.target.value)}
-        />
-        <button type="submit">Post</button>
-        </form>
+        {Auth.loggedIn() ? (
+                    <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <input
+                        type="text"
+                        placeholder="Post"
+                        value={postBody}
+                        onChange={(e) => setPostBody(e.target.value)}
+                    />
+                    <button type="submit">Post</button>
+                    </form>
+            ) : (
+                <p>You need to be logged in to post</p>
+            )}
     </div>
     );
 };
