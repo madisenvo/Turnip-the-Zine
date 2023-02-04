@@ -14,11 +14,9 @@ export const LOGIN = gql`
 // Maddy added post mutations
 export const ADD_POST = gql`
   mutation addPost($postId: ID!, $postBody: String!, $username: String!, $createdAt: String!) {
-    addPost(postId: $postId, postBody: $postBody, username: $username, createdAt: $createdAt) {
+    addPost(postBody: $postBody, username: $username ) {
       _id
-      postBody
       username
-      createdAt
     }
   }
 `;

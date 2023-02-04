@@ -4,10 +4,10 @@ import React, { useState, useEffect } from "react";
 import { useLazyQuery, useMutation } from "@apollo/client";
 import {
     QUERY_POSTS,
-    ADD_POST,
     UPDATE_POST,
     DELETE_POST,
 } from "../../utils/queries";
+import { ADD_POST } from '../../utils/mutations';
 import { useStoreContext } from "../../utils/GlobalState";
 
 const Posts = () => {
@@ -27,6 +27,7 @@ const Posts = () => {
 
     useEffect(() => {
     if (data) {
+        console.log(data);
         dispatch({
         type: "ADD_POST",
         posts: data.posts,
@@ -41,7 +42,7 @@ const Posts = () => {
     const handleSubmit = (e) => {
     e.preventDefault();
     addPost({
-        variables: { postId, postBody, username, createdAt },
+        variables: { postBody, username },
         update: (store, { data: { addPost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
