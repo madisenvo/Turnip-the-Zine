@@ -1,10 +1,9 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_POSTS = gql`
   {
     posts {
       _id
-      createdAt
       postBody
       username
     }
@@ -13,12 +12,10 @@ export const QUERY_POSTS = gql`
 
 // Maddy added post mutations here beause they were not working in the mutations.js file
 export const ADD_POST = gql`
-  mutation addPost($postId: ID!, $postBody: String!, $username: String!, $createdAt: String!) {
-    addPost(postId: $postId, postBody: $postBody, username: $username, createdAt: $createdAt) {
+  mutation addPost($postBody: String!, $username: String!) {
+    addPost(postBody: $postBody, username: $username) {
       _id
-      postBody
       username
-      createdAt
     }
   }
 `;
@@ -32,12 +29,10 @@ export const DELETE_POST = gql`
 `;
 
 export const UPDATE_POST = gql`
-  mutation updatePost($postId: ID!, $postBody: String!, $username: String!, $createdAt: String!) {
-    updatePost(postId: $postId, postBody: $postBody, username: $username, createdAt: $createdAt) {
+  mutation updatePost($postId: ID!, $postBody: String!) {
+    updatePost(postId: $postId, postBody: $postBody) {
       _id
       postBody
-      username
-      createdAt
     }
   }
 `;

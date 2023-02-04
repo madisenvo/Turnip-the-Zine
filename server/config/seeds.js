@@ -151,7 +151,6 @@ db.once("open", async () => {
   await Post.create({
     postBody: "This is a test post",
     username: "pwashington",
-    createdAt: new Date(Date.now()),
   });
 
   console.log("posts seeded");

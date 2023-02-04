@@ -26,7 +26,6 @@ const typeDefs = gql`
   _id: ID
   postBody: String
   username: String
-  createdAt: String
   }
 
   type User {
