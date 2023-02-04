@@ -4,7 +4,8 @@ import Cart from "../components/Cart";
 import Title from "../components/Title";
 import Band from "../components/Band";
 // import Video from "../components/Video";
-import Thoughts from "../components/Posts";
+import Posts from "../components/Posts";
+import DisplayPosts from "../components/Posts/DisplayPosts";
 
 
 const Home = () => {
@@ -14,7 +15,8 @@ const Home = () => {
       <Band />
       {/* <Video /> */}
       <ProductList />
-      <Thoughts />
+      <Posts />
+      <DisplayPosts />
       <Cart />
     </div>
   );

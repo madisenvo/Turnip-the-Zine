@@ -51,3 +51,30 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_POST = gql`
+mutation addPost($postBody: String!, $username: String!) {
+  addPost(postBody: $postBody, username: $username) {
+    _id
+    email
+    firstName
+    lastName
+    username
+    orders {
+      _id
+      products {
+        category {
+          _id
+          name
+        }
+      }
+    }
+    posts {
+      _id
+      createdAt
+      postBody
+      username
+    }
+  }
+}
+`

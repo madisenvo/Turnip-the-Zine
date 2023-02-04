@@ -69,3 +69,14 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_POSTS = gql`
+query posts {
+  posts {
+    _id
+    createdAt
+    postBody
+    username
+  }
+}
+`
