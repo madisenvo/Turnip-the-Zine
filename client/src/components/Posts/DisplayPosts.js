@@ -1,5 +1,6 @@
 import { QUERY_POSTS, QUERY_USER } from "../../utils/queries";
 import { useMutation, useQuery } from "@apollo/client";
+import "./posts.css";
 
 export default function DisplayPosts(){
     const { loading, data } = useQuery(QUERY_POSTS);

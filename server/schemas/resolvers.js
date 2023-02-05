@@ -178,11 +178,6 @@ const resolvers = {
       if (context.user) {
         const postData = await Post.findByIdAndRemove(
           { _id: _id }
-          // {
-          //   where: {
-          //     user_id: context.user._id,
-          //   },
-          // }
         );
 
         const userData = await User.findOneAndUpdate(
