@@ -63,16 +63,17 @@ const Posts = () => {
     }
   };
 
-  const handleUpdate = (e, postId, postBody, username) => {
+  const handleUpdate = (e, postId, postBody) => {
     e.preventDefault();
     setEditing({ postId, postBody });
     setUpdatePostBody(postBody);
   };
 
-  const handleUpdateSubmit = (e, postId, postBody, username) => {
+  const handleUpdateSubmit = (e, postId, postBody) => {
     e.preventDefault();
+    console.log("POST ID" + " " + postId);
     updatePost({
-      variables: { id: postId, postBody, username },
+      variables: { id: postId, postBody },
       update: (store, { data: { updatePost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
@@ -86,7 +87,7 @@ const Posts = () => {
       },
     });
     setPostBody("");
-    setUsername("");
+    setEditing(null);
 };
 
   const handleDelete = (e, postId) => {
