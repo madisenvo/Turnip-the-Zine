@@ -4,7 +4,6 @@ import { useLazyQuery, useMutation } from "@apollo/client";
 import { QUERY_POSTS } from "../../utils/queries";
 import { ADD_POST, UPDATE_POST, DELETE_POST } from "../../utils/mutations";
 import Auth from "../../utils/auth";
-
 import { useStoreContext } from "../../utils/GlobalState";
 
 const Posts = () => {
@@ -16,7 +15,7 @@ const Posts = () => {
   const [updatePost, { data: updatedPostData }] = useMutation(UPDATE_POST);
   const [deletePost, { data: deletedPostData }] = useMutation(DELETE_POST);
   const [postBody, setPostBody] = useState("");
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState(Auth.getProfile().data.username)
 
   useEffect(() => {
     getPosts();
@@ -33,18 +32,16 @@ const Posts = () => {
     // console.log(data);
   }, [data]);
 
-
-
   const handleSubmit = async (e) => {
+    console.log( Auth.getProfile().data.username);;
     e.preventDefault();
     try {
       const postObj = {
         postBody: postBody,
-        username: username,
+        username: Auth.getProfile().data.username
       };
 
-
-      const {data} = await addPost({
+      const { data } = await addPost({
         variables: postObj,
         update: (store, { data: { addPost } }) => {
           const data = store.readQuery({ query: QUERY_POSTS });
@@ -52,9 +49,9 @@ const Posts = () => {
             query: QUERY_POSTS,
             data: { posts: [...data.posts, addPost] },
           });
-            },
-          });
-      console.log(data);
+        },
+      });
+      
 
       setPostBody("");
       setUsername("");
@@ -63,10 +60,10 @@ const Posts = () => {
     }
   };
 
-  const handleUpdate = (e, postId) => {
+  const handleUpdate = (e, postId, postBody, username) => {
     e.preventDefault();
     updatePost({
-      variables: { postBody, username },
+      variables: { id: postId, postBody, username },
       update: (store, { data: { updatePost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
         store.writeQuery({
@@ -81,7 +78,7 @@ const Posts = () => {
     });
     setPostBody("");
     setUsername("");
-  };
+};
 
   const handleDelete = (e, postId) => {
     e.preventDefault();
@@ -103,26 +100,35 @@ const Posts = () => {
   return (
     <div className="posts">
       <div className="postContainer">
-        {posts.map((post) => (
-          <div className="postDiv" key={post._id}>
-            <p className="commentText">
-              {post.username}
-              <b />
-              {post.postBody}
-            </p>
-            <button onClick={(e) => handleUpdate(e, post._id)}>Update</button>
-            <button onClick={(e) => handleDelete(e, post._id)}>Delete</button>
-          </div>
-        ))}
+      {posts.map((post) => {
+          const showButtons = Auth.getProfile().data.username === post.username;
+          return (
+            <div className="postDiv" key={post._id}>
+              <p className="commentText">
+                {post.username}
+                <b />
+                {post.postBody}
+              </p>
+              {showButtons && (
+                <>
+                  <button onClick={(e) => handleUpdate(e, post._id, post.postBody, post.username)}>
+                    Update
+                  </button>
+                  <button onClick={(e) => handleDelete(e, post._id)}>
+                    Delete
+                  </button>
+                </>
+              )}
+            </div>
+          );
+        })}
       </div>
       {Auth.loggedIn() ? (
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+        <input
+          type="hidden"
+          value={Auth.getProfile().username}
+        />
           <input
             type="text"
             placeholder="Post"
