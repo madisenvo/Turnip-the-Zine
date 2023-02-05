@@ -22,11 +22,10 @@ const typeDefs = gql`
     products: [Product]
   }
 
-   type Post{
-   _id: ID
-   postBody: String
-   username: String
-   createdAt: String
+  type Post{
+  _id: ID
+  postBody: String
+  username: String
   }
 
   type User {
@@ -37,6 +36,7 @@ const typeDefs = gql`
     email: String
     orders: [Order]
     posts: [Post]
+    postBody: [String]
   }
 
   type Checkout {

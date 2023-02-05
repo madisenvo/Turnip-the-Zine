@@ -21,7 +21,12 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.2",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "moment": "^2.29.4",
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.7.0",
+    "cdbreact": "^1.5.5",
+    "react-icons": "^4.7.1"
   },
   "scripts": {
     "start": "react-scripts start",

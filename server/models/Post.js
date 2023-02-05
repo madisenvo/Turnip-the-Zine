@@ -12,12 +12,10 @@ const postSchema = new Schema(
       type: String,
       required: true,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (createdAtDate) =>
-        moment(createdAtDate).format("MMM DD, YYYY [at] hh:mm a"),
-    },
+    user_id: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    }
   },
   {
     toJSON: {

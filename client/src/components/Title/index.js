@@ -9,11 +9,14 @@ const ContentDiv = styled.div`
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   max-height: 30%;
+  width: 50%;
   padding: 2%;
 `;
 
 const Container = styled.div`
   position: relative;
+  text-align: center;
+  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) !important;
 `;
 
 export default function Title() {
@@ -23,11 +26,8 @@ export default function Title() {
         <source src={titleVideo} type="video/mp4" />
       </video>
 
-      <ContentDiv className="content">
-        <h1 style={{ fontSize: "2vw" }} >turnip</h1>
-        <p style={{ fontSize: "1vw" }} >
-        Checkout this months feature artists and come out to support local music.
-        </p>
+      <ContentDiv>
+        <h1 style={{ fontSize: "2vw" }} >Checkout this month's featured artists and come out to support local music.</h1>
       </ContentDiv>
     </Container>
   );

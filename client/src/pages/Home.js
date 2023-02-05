@@ -5,7 +5,8 @@ import Title from "../components/Title";
 import Band from "../components/Band";
 // import Video from "../components/Video";
 import Posts from "../components/Posts";
-import DisplayPosts from "../components/Posts/DisplayPosts";
+// import DisplayPosts from "../components/Posts/DisplayPosts";
+// import Posts from "../components/Posts";
 
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
       {/* <Video /> */}
       <ProductList />
       <Posts />
-      <DisplayPosts />
+      {/* <DisplayPosts /> */}
       <Cart />
     </div>
   );
