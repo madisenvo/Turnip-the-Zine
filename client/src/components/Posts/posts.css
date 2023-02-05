@@ -43,12 +43,11 @@
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  margin: 5px ;
   background-color: var(--secondary);
-  color: white;
+  color: black;
   font-family: 'Roboto Mono', monospace;
 }
-
 
 
 

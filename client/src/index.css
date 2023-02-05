@@ -133,11 +133,7 @@ button {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-
   border-radius: .5rem !important; 
-
- 
-
   border: none;
   outline: none;
   cursor: pointer;
@@ -300,5 +296,18 @@ input:focus {
     width: 100%;
   }
 }
+/* For devices with screen widths less than or equal to 480px */
+@media only screen and (max-width: 480px) {
+  .nav__links{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .site-logo{
+    left: 0px;
+    
+  }
+}
+
 
 
