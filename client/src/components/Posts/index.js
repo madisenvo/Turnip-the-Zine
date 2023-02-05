@@ -80,7 +80,6 @@ import { useLazyQuery, useMutation } from "@apollo/client";
 import { QUERY_POSTS } from "../../utils/queries";
 import { ADD_POST, UPDATE_POST, DELETE_POST } from "../../utils/mutations";
 import Auth from "../../utils/auth";
-
 import { useStoreContext } from "../../utils/GlobalState";
 
 const Posts = () => {
@@ -185,8 +184,8 @@ const Posts = () => {
               <b />
               {post.postBody}
             </p>
-            <button onClick={(e) => handleUpdate(e, post._id)}>Update</button>
-            <button onClick={(e) => handleDelete(e, post._id)}>Delete</button>
+            <button className="btn" onClick={(e) => handleUpdate(e, post._id)}>Update</button>
+            <button className="btn" onClick={(e) => handleDelete(e, post._id)}>Delete</button>
           </div>
         ))}
       </div>
