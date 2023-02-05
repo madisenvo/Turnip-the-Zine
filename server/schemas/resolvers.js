@@ -164,7 +164,7 @@ const resolvers = {
       if (context.user) {
         const updatePost = await Post.findOneAndUpdate(
           { _id: _id },
-          { $set: { postBody: postBody } },
+          { $set: { postBody: postBody, username: User.username } },
           { new: true }
         );
 
