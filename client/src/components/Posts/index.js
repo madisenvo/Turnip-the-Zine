@@ -105,8 +105,7 @@ const Posts = () => {
           return (
             <div className="postDiv" key={post._id}>
               <p className="commentText">
-                {post.username}
-                <b />
+                <h5>{post.username}</h5>
                 {post.postBody}
               </p>
               {showButtons && (
