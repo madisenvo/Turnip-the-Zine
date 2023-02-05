@@ -12,8 +12,8 @@ export default function GroupExample() {
   return (
     <>
       <CardGroup className="cardGroup">
-        {artists.map((artist) => (
-          <Card className="mx-3" border="dark" style={{ width: "18rem" }}>
+        {artists.map((artist, i) => (
+          <Card key={i} className="mx-3" border="dark" style={{ width: "18rem" }}>
             <Card.Img
               className="cardImg img-fluid"
               variant="top"
