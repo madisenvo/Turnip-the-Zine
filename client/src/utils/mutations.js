@@ -11,22 +11,39 @@ export const LOGIN = gql`
   }
 `;
 
-export const ADD_POST = gql`
-mutation addPost($postBody: String!, $username: String!) {
-  addPost(postBody: $postBody, username: $username) {
-    _id
-    username
-    postBody
-  }
-}
-`;
+
 
 export const DELETE_POST = gql`
-  mutation deletedPost($postId: ID!) {
-    deletedPost(postId: $postId) {
+mutation deletePost($id: ID!) {
+  deletePost(_id: $id) {
+    _id
+    email
+    firstName
+    lastName
+    username
+    orders {
       _id
+      products {
+        _id
+        category {
+          _id
+          name
+        }
+        description
+        image
+        name
+        price
+        quantity
+      }
+      purchaseDate
+    }
+    posts {
+      _id
+      postBody
+      username
     }
   }
+}
 `;
 
 export const UPDATE_POST = gql`
@@ -78,3 +95,27 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_POST = gql`
+mutation addPost($postBody: String!, $username: String!) {
+  addPost(postBody: $postBody, username: $username) {
+    _id
+    email
+    firstName
+    lastName
+    username
+    orders {
+      _id
+      products {
+        category {
+          _id
+          name
+        }
+      }
+    }
+    posts {
+      _id
+    }
+  }
+}
+`

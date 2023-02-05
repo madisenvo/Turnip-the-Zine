@@ -1,15 +1,7 @@
 import { gql } from "@apollo/client";
 
 
-export const QUERY_POSTS = gql`
-  query getPosts {
-    posts {
-      _id
-      postBody
-      username
-    }
-  }
-`;
+
 
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
@@ -80,3 +72,13 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+export const QUERY_POSTS = gql`
+query posts {
+  posts {
+    _id
+    postBody
+    username
+  }
+}
+`
