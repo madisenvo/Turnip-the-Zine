@@ -35,10 +35,6 @@ const userSchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       ref: "Post",
-      postBody: {
-        type: String,
-        required: true,
-      }
     },
   ],
 });
