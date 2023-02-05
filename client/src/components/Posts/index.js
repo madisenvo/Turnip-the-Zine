@@ -69,26 +69,27 @@ const Posts = () => {
     setUpdatePostBody(postBody);
   };
 
-  const handleUpdateSubmit = (e, postId, postBody) => {
+  const handleUpdateSubmit = (e, postId) => {
     e.preventDefault();
     console.log("POST ID" + " " + postId);
     updatePost({
-      variables: { id: postId, postBody },
+      variables: { id: postId, postBody: updatePostBody },
       update: (store, { data: { updatePost } }) => {
         const data = store.readQuery({ query: QUERY_POSTS });
+        const updatedPost = { ...updatePost, username: data.posts.find(post => post._id === postId).username };
         store.writeQuery({
           query: QUERY_POSTS,
           data: {
             posts: data.posts.map((post) =>
-              post._id === postId ? updatePost : post
+              post._id === postId ? updatedPost : post
             ),
           },
         });
       },
     });
-    setPostBody("");
+    setUpdatePostBody("");
     setEditing(null);
-};
+  };
 
   const handleDelete = (e, postId) => {
     e.preventDefault();
