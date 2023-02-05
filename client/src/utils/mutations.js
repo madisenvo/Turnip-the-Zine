@@ -47,8 +47,8 @@ mutation deletePost($id: ID!) {
 `;
 
 export const UPDATE_POST = gql`
-  mutation updatePost($postId: ID!, $postBody: String!) {
-    updatePost(postId: $postId, postBody: $postBody) {
+  mutation updatePost($id: ID!, $postBody: String!) {
+    updatePost(_id: $id, postBody: $postBody) {
       _id
       postBody
     }
