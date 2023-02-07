@@ -115,6 +115,7 @@ mutation addPost($postBody: String!, $username: String!) {
     }
     posts {
       _id
+      postBody
     }
   }
 }
