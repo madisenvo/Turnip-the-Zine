@@ -154,7 +154,7 @@ console.log(postObj);
       })}
     </div>
     {Auth.loggedIn() ? (
-      <form onSubmit={handleSubmit}>
+      <form className="newPost" onSubmit={handleSubmit}>
         <input
           type="hidden"
           value={Auth.getProfile().username}

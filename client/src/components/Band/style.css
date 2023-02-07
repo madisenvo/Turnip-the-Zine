@@ -1,24 +1,36 @@
 .cardGroup {
-padding-top: 20px;
-padding-bottom: 20px;
-background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(
+    to right,
+    rgba(251, 194, 235, 1),
+    rgba(166, 193, 238, 1)
+  ) !important;
 }
 .cardBody {
-	background: black;
-	color: white !important;
+  background: black;
+  color: white !important;
 }
 .cardImg {
-	transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .cardImg:hover {
-	transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .card-title {
-	padding: 10%;
-	font-size: 2rem !important;
+  padding: 10%;
+  font-size: 2rem !important;
 }
 
-
-
+@media (max-width: 575px) {
+  .cardGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    margin: 10px auto;
+  }
+}
