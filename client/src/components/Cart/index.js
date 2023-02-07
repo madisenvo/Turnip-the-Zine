@@ -10,7 +10,7 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
 
 // stripePromise returns a promise with the stripe object as soon as the Stripe package loads
-const stripePromise = loadStripe(process.env.STRIPE_KEY);
+const stripePromise = loadStripe(`${process.env.REACT_APP_STRIPE_KEY}`);
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
