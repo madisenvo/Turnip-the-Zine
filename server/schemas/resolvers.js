@@ -152,7 +152,7 @@ const resolvers = {
           { _id: context.user._id },
           { $addToSet: { posts: postData._id } },
           { new: true }
-        );
+        ).populate("posts")
 
         return userData;
       }

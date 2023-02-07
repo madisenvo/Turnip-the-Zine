@@ -6,21 +6,27 @@ import Band from "../components/Band";
 // import Video from "../components/Video";
 import Posts from "../components/Posts";
 // import DisplayPosts from "../components/Posts/DisplayPosts";
-// import Posts from "../components/Posts";
+
 
 
 const Home = () => {
-  return (
-    <div>
-      <Title />
-      <Band />
-      {/* <Video /> */}
-      <ProductList />
-      <Posts />
-      {/* <DisplayPosts /> */}
-      <Cart />
-    </div>
-  );
+  const token = localStorage.getItem("id_token")
+  if (token){
+
+    return (
+      <div>
+        <Title />
+        <Band />
+        {/* <Video /> */}
+        <ProductList />
+        <Posts />
+        {/* <DisplayPosts /> */}
+        <Cart />
+      </div>
+    );
+  } else {
+window.location.replace("/login")
+  }
 };
 
 export default Home;

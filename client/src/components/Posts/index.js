@@ -43,7 +43,7 @@ const Posts = () => {
         postBody: postBody,
         username: Auth.getProfile().data.username
       };
-
+console.log(postObj);
       const { data } = await addPost({
         variables: postObj,
         update: (store, { data: { addPost } }) => {
@@ -58,6 +58,7 @@ const Posts = () => {
 
       setPostBody("");
       setUsername("");
+      // doesnt catch error here
     } catch (err) {
       console.error(err);
     }
