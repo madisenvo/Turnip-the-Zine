@@ -22,6 +22,9 @@ const Cart = () => {
     if (data) {
       stripePromise.then((res) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
+      })
+      .catch((err) => {
+        console.log(err);
       });
     }
   }, [data]);
@@ -65,6 +68,7 @@ const Cart = () => {
     getCheckout({
       variables: { products: productIds },
     });
+    console.log(process.env.REACT_APP_STRIPE_KEY);
   }
 
   if (!state.cartOpen) {
