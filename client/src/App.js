@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   ApolloClient,
@@ -24,7 +24,8 @@ const httpLink = createHttpLink({
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("id_token");
-  return {
+  console.log({token});
+    return {
     headers: {
       ...headers,
       authorization: token ? `Bearer ${token}` : "",
@@ -54,9 +55,11 @@ const client = new ApolloClient({
   cache,
 });
 
+
 function App() {
   return (
     <ApolloProvider client={client}>
+      
       <Router>
         <div>
           <StoreProvider>
