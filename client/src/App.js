@@ -38,7 +38,7 @@ const cache = new InMemoryCache({
     Query: {
       fields: {
         posts: {
-          merge(existing = [], incoming= [], { merger } ) {
+          merge(existing = [], incoming = [], { merger } ) {
             return [
               ...existing.filter((post) => post._id !== incoming._id),
               ...incoming,
@@ -59,7 +59,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      
+
       <Router>
         <div>
           <StoreProvider>
