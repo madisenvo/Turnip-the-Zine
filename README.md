@@ -5,7 +5,7 @@
 
 
 ---
-Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westword would feature. Each month Trunip features artists who are playing shows within that month. Delivering to you a profile on each artist and a store where you can purchase fee-free tickets to see them live or grab up all the merch you need to show your fandom.
+Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westword would feature. Each month Trunip features artists who are playing shows within that month. Delivering to you a profile on each artist and a store where you can purchase fee-free tickets to see them live and grab up all the merch you need to show your fandom. Zines are about community, so "turnip your thoughts" in our community message board.  
 
 ## Navigation
 ---
@@ -17,15 +17,15 @@ Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westwo
 
 ## Artist Features
 ---
-<img src= ./client\public\images\turnipTheZineReadMeHeader.png>
+<img src= ./client\public\images\turnipTheZineReadmeFeatureProfiles.png>
 
 ## Merch
 ---
-<img src= ./client\public\images\turnipTheZineReadMeHeader.png>
+<img src= ./client\public\images\turnipTheZineReadMeMerch.png>
 
-## Thread
+<!-- ## Thread
 ---
-<img src= ./client\public\images\turnipTheZineReadMeHeader.png>
+<img src= ./client\public\images\turnipTheZineReadMeHeader.png> -->
 
 ## Technology
 ---
@@ -34,6 +34,7 @@ Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westwo
 * JavaScript
 * Node.js
 * Apollo
+* GraphQL
 * Bootstrap
 * React
 * Heroku
@@ -59,7 +60,7 @@ Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westwo
 
 ## Site
 ---
-<a href ="https://github.com/madisenvo/Turnip-the-Zine">https://github.com/madisenvo/Turnip-the-Zine</a>
+<a href ="https://turnip-the-zine.herokuapp.com/">https://turnip-the-zine.herokuapp.com/</a>
 
 ## Future Development
 ---
