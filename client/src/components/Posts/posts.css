@@ -1,6 +1,10 @@
-.posts{
+.posts {
   margin: 20px;
-  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) !important;
+  background: linear-gradient(
+    to right,
+    rgba(251, 194, 235, 1),
+    rgba(166, 193, 238, 1)
+  ) !important;
   padding: 5%;
 }
 .postContainer {
@@ -9,6 +13,27 @@
   align-items: center;
   justify-content: center;
 }
+
+.newPost {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 50%;
+  height: 50px;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+button[type="submit"] {
+  width: 20%;
+  height: 50px;
+  font-size: 1.2em;
+}
+
 .commentText {
   font-size: 13px;
   line-height: 18px;
@@ -16,7 +41,7 @@
   display: block;
   /* background: #f6f6f7; */
   border: 1px solid #000000;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 15px 20px 20px 20px;
   width: auto;
 }
@@ -45,15 +70,15 @@
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 5px ;
+  margin: 5px;
   /* margin-bottom: 40px; */
   background-color: var(--secondary);
   color: black;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .postDiv {
@@ -61,11 +86,3 @@
   margin-top: 30px;
   width: 80%;
 }
-
-
-
-
-
-
-
-
