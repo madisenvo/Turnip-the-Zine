@@ -48,6 +48,7 @@ const Cart = () => {
 
   function calculateTotal() {
     let sum = 0;
+
     state.cart.forEach((item) => {
       sum += item.price * item.purchaseQuantity;
     });
@@ -68,7 +69,6 @@ const Cart = () => {
     getCheckout({
       variables: { products: productIds },
     });
-    console.log(process.env.REACT_APP_STRIPE_KEY);
   }
 
   if (!state.cartOpen) {
