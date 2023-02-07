@@ -17,11 +17,11 @@ Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westwo
 
 ## Artist Features
 ---
-<img src= ./client\public\images\turnipTheZineReadMeHeader.png>
+<img src= ./client\public\images\turnipTheZineReadmeFeatureProfiles.png>
 
 ## Merch
 ---
-<img src= ./client\public\images\turnipTheZineReadMeHeader.png>
+<img src= ./client\public\images\turnipTheZineReadMeMerch.png>
 
 ## Thread
 ---
@@ -34,6 +34,7 @@ Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westwo
 * JavaScript
 * Node.js
 * Apollo
+* GraphQL
 * Bootstrap
 * React
 * Heroku
