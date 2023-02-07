@@ -166,7 +166,7 @@ console.log(postObj);
           value={postBody}
           onChange={(e) => setPostBody(e.target.value)}
         />
-        <button type="submit">Post</button>
+        <button className="postSubmitBtn" type="submit">Post</button>
       </form>
     ) : (
       <p>You need to be logged in to post</p>
