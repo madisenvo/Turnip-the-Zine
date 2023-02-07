@@ -39,8 +39,6 @@ mutation deletePost($id: ID!) {
     }
     posts {
       _id
-      postBody
-      username
     }
   }
 }

@@ -38,13 +38,16 @@ const cache = new InMemoryCache({
     Query: {
       fields: {
         posts: {
-          merge(existing = [], incoming, { merger }) {
-            return [...existing.filter(post => post._id !== incoming._id), ...incoming];
-          }
-        }
-      }
-    }
-  }
+          merge(existing = [], incoming= [], { merger } ) {
+            return [
+              ...existing.filter((post) => post._id !== incoming._id),
+              ...incoming,
+            ];
+          },
+        },
+      },
+    },
+  },
 });
 
 const client = new ApolloClient({
@@ -62,34 +65,13 @@ function App() {
           <StoreProvider>
             <Nav />
             <Routes>
-              <Route 
-                path="/" 
-                element={<Home />} 
-              />
-              <Route 
-                path="/login" 
-                element={<Login />} 
-              />
-              <Route 
-                path="/signup" 
-                element={<Signup />} 
-              />
-              <Route 
-                path="/success" 
-                element={<Success />} 
-              />
-              <Route 
-                path="/orderHistory" 
-                element={<OrderHistory />} 
-              />
-              <Route 
-                path="/products/:id" 
-                element={<Detail />} 
-              />
-              <Route 
-                path="*" 
-                element={<NoMatch />} 
-              />
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/success" element={<Success />} />
+              <Route path="/orderHistory" element={<OrderHistory />} />
+              <Route path="/products/:id" element={<Detail />} />
+              <Route path="*" element={<NoMatch />} />
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
