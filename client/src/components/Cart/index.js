@@ -22,6 +22,9 @@ const Cart = () => {
     if (data) {
       stripePromise.then((res) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
+      })
+      .catch((err) => {
+        console.log(err);
       });
     }
   }, [data]);
@@ -45,6 +48,7 @@ const Cart = () => {
 
   function calculateTotal() {
     let sum = 0;
+
     state.cart.forEach((item) => {
       sum += item.price * item.purchaseQuantity;
     });
