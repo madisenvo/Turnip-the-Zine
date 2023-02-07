@@ -112,6 +112,7 @@ console.log(postObj);
   return (
     <div className="posts">
     <div className="postContainer">
+      <h1>Turnip your Thoughts</h1>
       {posts.map((post) => {
         const showButtons = Auth.getProfile().data.username === post.username;
         return (
