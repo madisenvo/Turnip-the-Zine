@@ -25,7 +25,7 @@ Turnip-the-Zine is the DIY site to find the Denver local artists you wish Westwo
 
 <!-- ## Thread
 ---
-<img src= ./client\public\images\turnipTheZineReadMeHeader.png> -->
+<img src= ./client\public\images\posts.png> -->
 
 ## Technology
 ---
